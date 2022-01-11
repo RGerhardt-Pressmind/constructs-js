@@ -1,10 +1,11 @@
 {
-  "name": "constructjs",
-  "version": "1.0.0",
+  "name": "constructs-js",
+  "version": "1.0.1",
   "description": "A NodeJS based data generator. This returns an infinite amount of randomly generated data according to a structure or inserts it into a database system.",
   "contributors": [
     "Robbyn Gerhardt <r.gerhardt@team-braeutigam.de>"
   ],
+  "homepage": "https://rgerhardt-pressmind.github.io/construct.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/RGerhardt-Pressmind/construct.js.git"

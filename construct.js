@@ -182,7 +182,7 @@ function Construct(locale){
     }
 
     self.validateTemplateFileContent    =   function(){
-        const propertiesCheck    =   ['name', 'structure', 'output'];
+        const propertiesCheck    =   ['structure', 'output'];
 
         propertiesCheck.forEach((property)=>{
             if(!self.template.hasOwnProperty(property)) {

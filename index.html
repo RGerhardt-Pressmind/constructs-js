@@ -14,14 +14,99 @@
     <h1 class="text-center">construct.js Example</h1>
     <p>With Construct random content can be generated quickly and in large quantities. Whether via <strong>JavaScript</strong> or with <strong>NodeJS</strong>.</p>
 
-    <h4>Automatically generate a random first and last name</h4>
+    <h4>Automatically generate a random values</h4>
 
     <pre><code class="language-javascript">
 &#x3C;script src=&#x22;dist/construct.min.js&#x22; type=&#x22;text/javascript&#x22;&#x3E;&#x3C;/script&#x3E;
 
-var first_name        =   construct.ug.get('first_name'); // Output: Hanna
-var sur_name          =   construct.ug.get('sur_name'); // Output: Maxel
+var building_number   =   construct.ug.get('building_number');
+var cell_phone        =   construct.ug.get('cell_phone');
+var city              =   construct.ug.get('city');
+var company           =   construct.ug.get('company');
+var country           =   construct.ug.get('country');
+var email             =   construct.ug.get('email');
+var first_name        =   construct.ug.get('first_name');
+var gender            =   construct.ug.get('gender');
+var image             =   construct.ug.get('image');
+var image_animal      =   construct.ug.get('image', {type: 'animal'});
+var image_city        =   construct.ug.get('image', {type: 'city'});
+var image_human       =   construct.ug.get('image', {type: 'human'});
+var image_nature      =   construct.ug.get('image', {type: 'nature'});
+var image_technic     =   construct.ug.get('image', {type: 'technic'});
+var loremIpsum        =   construct.ug.get('loremIpsum', {words: 10});
+var name              =   construct.ug.get('name');
+var phone             =   construct.ug.get('phone');
+var postcode          =   construct.ug.get('postcode');
+var state             =   construct.ug.get('state');
+var street            =   construct.ug.get('street');
+var sur_name          =   construct.ug.get('sur_name');
+var title             =   construct.ug.get('title');
     </code></pre>
+
+    <p>
+        <strong>building_number</strong>: <span id="building_number"></span><br>
+        <strong>cell_phone</strong>: <span id="cell_phone"></span><br>
+        <strong>city</strong>: <span id="city"></span><br>
+        <strong>company</strong>: <span id="company"></span><br>
+        <strong>country</strong>: <span id="country"></span><br>
+        <strong>email</strong>: <span id="email"></span><br>
+        <strong>first_name</strong>: <span id="first_name"></span><br>
+        <strong>gender</strong>: <span id="gender"></span><br><br>
+        <strong>image</strong>: <br><img id="image_img" width="100"><br><span id="image"></span><br><br>
+        <strong>image_animal</strong>: <br><img id="image_animal_img" width="100"><br><span id="image_animal"></span><br><br>
+        <strong>image_city</strong>: <br><img id="image_city_img" width="100"><br><span id="image_city"></span><br><br>
+        <strong>image_human</strong>: <br><img id="image_human_img" width="100"><br><span id="image_human"></span><br><br>
+        <strong>image_nature</strong>: <br><img id="image_nature_img" width="100"><br><span id="image_nature"></span><br><br>
+        <strong>image_technic</strong>: <br><img id="image_technic_img" width="100"><br><span id="image_technic"></span><br><br>
+        <strong>loremIpsum</strong>: <span id="loremIpsum"></span><br>
+        <strong>name</strong>: <span id="name"></span><br>
+        <strong>phone</strong>: <span id="phone"></span><br>
+        <strong>postcode</strong>: <span id="postcode"></span><br>
+        <strong>state</strong>: <span id="state"></span><br>
+        <strong>street</strong>: <span id="street"></span><br>
+        <strong>sur_name</strong>: <span id="sur_name"></span><br>
+        <strong>title</strong>: <span id="title"></span><br>
+    </p>
+
+    <script>
+        document.getElementById('first_name').innerText = construct.ug.get('first_name');
+        document.getElementById('sur_name').innerText = construct.ug.get('sur_name');
+        document.getElementById('name').innerText = construct.ug.get('name');
+        document.getElementById('building_number').innerText = construct.ug.get('building_number');
+        document.getElementById('cell_phone').innerText = construct.ug.get('cell_phone');
+        document.getElementById('city').innerText = construct.ug.get('city');
+        document.getElementById('company').innerText = construct.ug.get('company');
+        document.getElementById('country').innerText = construct.ug.get('country');
+        document.getElementById('email').innerText = construct.ug.get('email');
+        document.getElementById('gender').innerText = construct.ug.get('gender');
+        document.getElementById('loremIpsum').innerText = construct.ug.get('loremIpsum', {words: 10});
+        document.getElementById('phone').innerText = construct.ug.get('phone');
+        document.getElementById('postcode').innerText = construct.ug.get('postcode');
+        document.getElementById('state').innerText = construct.ug.get('state');
+        document.getElementById('street').innerText = construct.ug.get('street');
+        document.getElementById('title').innerText = construct.ug.get('title');
+
+        document.getElementById('image').innerText = construct.ug.get('image');
+        document.getElementById('image_img').src = document.getElementById('image').innerText;
+
+        document.getElementById('image_nature').innerText = construct.ug.get('image', {type: 'nature'});
+        document.getElementById('image_nature_img').src = document.getElementById('image_nature').innerText;
+
+        document.getElementById('image_animal').innerText = construct.ug.get('image', {type: 'animal'});
+        document.getElementById('image_animal_img').src = document.getElementById('image_animal').innerText;
+
+        document.getElementById('image_city').innerText = construct.ug.get('image', {type: 'city'});
+        document.getElementById('image_city_img').src = document.getElementById('image_city').innerText;
+
+        document.getElementById('image_human').innerText = construct.ug.get('image', {type: 'human'});
+        document.getElementById('image_human_img').src = document.getElementById('image_human').innerText;
+
+        document.getElementById('image_technic').innerText = construct.ug.get('image', {type: 'technic'});
+        document.getElementById('image_technic_img').src = document.getElementById('image_technic').innerText;
+    </script>
+
+    <h4>Generate other random values</h4>
+
 
     <table class="table table-bordered">
         <thead>
@@ -36,7 +121,7 @@ var sur_name          =   construct.ug.get('sur_name'); // Output: Maxel
     </table>
 
     <script>
-        for(var i = 0; ++i <= 10;)
+        for(var i = 0; ++i <= 5;)
         {
             var avatar      =   construct.ug.get('image', {type: 'avatar'});
             var name        =   construct.ug.get('name');
@@ -59,5 +144,101 @@ var sur_name          =   construct.ug.get('sur_name'); // Output: Maxel
 
         hljs.highlightAll();
     </script>
+
+    <h4>Generating a JSON based on a template</h4>
+<pre><code class="language-javascript">
+&#x3C;script src=&#x22;dist/construct.min.js&#x22; type=&#x22;text/javascript&#x22;&#x3E;&#x3C;/script&#x3E;
+
+let template = {
+    name: "Example template",
+    structure: [
+        {
+            name: "id",
+            mask: "[ug:id]"
+        },
+        {
+            name: "first_name",
+            mask: "[ug:first_name]"
+        },
+        {
+            name: "sur_name",
+            mask: "[ug:sur_name]"
+        },
+        {
+            name: "name",
+            mask: "{first_name} {sur_name}" // Merge field content from {"name": "first_name"} and {"name": "sur_name"}
+        },
+        {
+            name: "birthday",
+            mask: "[ug:date(1990-01-01, 1970-01-01)]" // Generate date from 01.01.1970 and 01.01.1990
+        },
+        {
+            name: "age",
+            mask: "[ug:diffYearNow({birthday})]" // Returns the difference in years from the field content {"name": "birthday"} returns
+        },
+        {
+            name: "created_date",
+            mask: "[ug:datetime]"
+        }
+    ],
+    output: {
+        result: "output",
+        type: "json",
+        limit: 5
+    }
+};
+
+let generatedData = construct.generateUniqData(template);
+
+console.log(generatedData);
+    </code></pre>
+
+    <strong>Output</strong>
+    <code class="language-json"><pre id="json"></pre></code>
+    <script>
+        let template = {
+            name: "Example template",
+            structure: [
+                {
+                    name: "id",
+                    mask: "[ug:id]"
+                },
+                {
+                    name: "first_name",
+                    mask: "[ug:first_name]"
+                },
+                {
+                    name: "sur_name",
+                    mask: "[ug:sur_name]"
+                },
+                {
+                    name: "name",
+                    mask: "{first_name} {sur_name}"
+                },
+                {
+                    name: "birthday",
+                    mask: "[ug:date(1990-01-01, 1970-01-01)]"
+                },
+                {
+                    name: "age",
+                    mask: "[ug:diffYearNow({birthday})]"
+                },
+                {
+                    name: "created_date",
+                    mask: "[ug:datetime]"
+                }
+            ],
+            output: {
+                result: "output",
+                type: "json",
+                limit: 5
+            }
+        };
+
+        let generatedData = construct.generateUniqData(template);
+
+        document.getElementById('json').innerText  =   JSON.stringify(JSON.parse(generatedData), null, 2);
+    </script>
+
 </body>
 </html>
