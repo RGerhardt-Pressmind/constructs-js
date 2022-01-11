@@ -1,0 +1,31 @@
+{
+  "name": "construct",
+  "version": "1.0.0",
+  "description": "A NodeJS based data generator. This returns an infinite amount of randomly generated data according to a structure or inserts it into a database system.",
+  "contributors": [
+    "Robbyn Gerhardt <r.gerhardt@team-braeutigam.de>"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/RGerhardt-Pressmind/construct.js.git"
+  },
+  "main": "index.js",
+  "scripts": {
+    "start": "node main.js",
+    "build": "browserify index.js -s construct -o dist/construct.js && minify dist/construct.js > dist/construct.min.js"
+  },
+  "keywords": [
+    "uniq",
+    "text",
+    "generator",
+    "random",
+    "mysql",
+    "json",
+    "sql"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "browserify": "^17.0.0",
+    "minify": "^8.0.3"
+  }
+}
