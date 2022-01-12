@@ -5,15 +5,19 @@
 ## Demo
 [https://rgerhardt-pressmind.github.io/construct.js](https://rgerhardt-pressmind.github.io/construct.js)
 
+![locales](https://img.shields.io/badge/locales-10-blue)
+
 ## Introduction
 
 ### Browser
 ```html
 <script src = "dist/construct.min.js" type = "text/javascript"></script>
 <script>
-  let uniqFirstName = construct.ug.get('first_name'); // Maik
-  let uniqSurName   = construct.ug.get('sur_name'); // Raschel
-  let uniqEmail     = construct.ug.get('email'); // max@gmail.com
+    var construct = new construct("de"); // de = locale (fallback locale is "de")
+
+    let uniqFirstName = construct.ug.get('first_name'); // Maik
+    let uniqSurName   = construct.ug.get('sur_name'); // Raschel
+    let uniqEmail     = construct.ug.get('email'); // max@gmail.com
 </script>
 ```
 
