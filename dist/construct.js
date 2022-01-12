@@ -9,7 +9,8 @@ function Construct(locale){
     self.loadedLocales  =   {
         'de':       require('./locales/de'),
         'af_ZA':    require('./locales/af_ZA'),
-        'ar':       require('./locales/ar')
+        'ar':       require('./locales/ar'),
+        'en_GB':    require('./locales/en_GB'),
     };
 
     if(!self.loadedLocales[locale]){
@@ -250,7 +251,7 @@ function Construct(locale){
 
 module['exports']  =   Construct;
 
-},{"./locales/af_ZA":12,"./locales/ar":26,"./locales/de":46,"./modules/ug":55}],2:[function(require,module,exports){
+},{"./locales/af_ZA":12,"./locales/ar":26,"./locales/de":46,"./locales/en_GB":63,"./modules/ug":69}],2:[function(require,module,exports){
 var Construct = require('./construct');
 module['exports'] = Construct;
 
@@ -363,8 +364,11 @@ module['exports'] = {
 }
 
 },{}],22:[function(require,module,exports){
-arguments[4][8][0].apply(exports,arguments)
-},{"dup":8}],23:[function(require,module,exports){
+module['exports'] = {
+    items: ['{sur_name:default} {company:suffix}', '{sur_name:default}-{sur_name:default}']
+};
+
+},{}],23:[function(require,module,exports){
 module['exports']  =   {
     items: ['Argentina']
 };
@@ -470,7 +474,12 @@ module['exports'] = {
 
 },{}],42:[function(require,module,exports){
 module['exports'] = {
-    items: ['{first_name:default}@{email:suffix}']
+    items: ['{first_name:default}@{email:suffix}'],
+
+    after: function(item){
+        return item.charAt(0).toLowerCase()+item.slice(1);
+    }
+
 }
 
 },{}],43:[function(require,module,exports){
@@ -618,6 +627,83 @@ module['exports'] = {
 };
 
 },{}],55:[function(require,module,exports){
+arguments[4][3][0].apply(exports,arguments)
+},{"dup":3}],56:[function(require,module,exports){
+module['exports'] = {
+    items: ['+44-72-#######', '+44-74-#######', '072 ### ####', '072#######', '074 ### ####']
+}
+
+},{}],57:[function(require,module,exports){
+module['exports']  =   {
+    items: ["London","Birmingham","Leeds","Glasgow","Sheffield","Bradford","Liverpool","Edinburgh","Manchester","Bristol","Kirklees","Fife","Wirral","North Lanarkshire","Wakefield","Cardiff","Dudley","Wigan","East Riding","South Lanarkshire","Coventry","Belfast","Leicester","Sunderland","Sandwell","Doncaster","Stockport","Sefton","Nottingham","Newcastle-upon-Tyne","Kingston-upon-Hull","Bolton","Walsall","Plymouth","Rotherham","Stoke-on-Trent","Wolverhampton","Rhondda, Cynon, Taff","South Gloucestershire","Derby","Swansea","Salford","Aberdeenshire","Barnsley","Tameside","Oldham","Trafford","Aberdeen","Southampton","Highland","Rochdale","Solihull","Gateshead","Milton Keynes","North Tyneside","Calderdale","Northampton","Portsmouth","Warrington","North Somerset","Bury","Luton","St Helens","Stockton-on-Tees","Renfrewshire","York","Thamesdown","Southend-on-Sea","New Forest","Caerphilly","Carmarthenshire","Bath & North East Somerset","Wycombe","Basildon","Bournemouth","Peterborough","North East Lincolnshire","Chelmsford","Brighton","South Tyneside","Charnwood","Aylesbury Vale","Colchester","Knowsley","North Lincolnshire","Huntingdonshire","Macclesfield","Blackpool","West Lothian","South Somerset","Dundee","Basingstoke & Deane","Harrogate","Dumfries & Galloway","Middlesbrough","Flintshire","Rochester-upon-Medway","The Wrekin","Newbury","Falkirk","Reading","Wokingham","Windsor & Maidenhead","Maidstone","Redcar & Cleveland","North Ayrshire","Blackburn","Neath Port Talbot","Poole","Wealden","Arun","Bedford","Oxford","Lancaster","Newport","Canterbury","Preston","Dacorum","Cherwell","Perth & Kinross","Thurrock","Tendring","Kings Lynn & West Norfolk","St Albans","Bridgend","South Cambridgeshire","Braintree","Norwich","Thanet","Isle of Wight","Mid Sussex","South Oxfordshire","Guildford","Elmbridge","Stafford","Powys","East Hertfordshire","Torbay","Wrexham Maelor","East Devon","East Lindsey","Halton","Warwick","East Ayrshire","Newcastle-under-Lyme","North Wiltshire","South Kesteven","Epping Forest","Vale of Glamorgan","Reigate & Banstead","Chester","Mid Bedfordshire","Suffolk Coastal","Horsham","Nuneaton & Bedworth","Gwynedd","Swale","Havant & Waterloo","Teignbridge","Cambridge","Vale Royal","Amber Valley","North Hertfordshire","South Ayrshire","Waverley","Broadland","Crewe & Nantwich","Breckland","Ipswich","Pembrokeshire","Vale of White Horse","Salisbury","Gedling","Eastleigh","Broxtowe","Stratford-on-Avon","South Bedfordshire","Angus","East Hampshire","East Dunbartonshire","Conway","Sevenoaks","Slough","Bracknell Forest","West Lancashire","West Wiltshire","Ashfield","Lisburn","Scarborough","Stroud","Wychavon","Waveney","Exeter","Dover","Test Valley","Gloucester","Erewash","Cheltenham","Bassetlaw","Scottish Borders"]
+};
+
+},{}],58:[function(require,module,exports){
+module['exports'] = {
+    items: ['PLC', 'CIC', 'RTM', 'SE']
+}
+
+},{}],59:[function(require,module,exports){
+arguments[4][8][0].apply(exports,arguments)
+},{"dup":8}],60:[function(require,module,exports){
+module['exports']  =   {
+    items: ['United Kingdom']
+};
+
+},{}],61:[function(require,module,exports){
+module['exports'] =   {
+    items: ["emily","James","Chloe","jack","Megan","Alex","Charlotte","Ben","emma","Daniel","Lauren","Tom","Hannah","adam","ellie","Ryan","Sophie","Sam","katie","matthew","Lucy","Lewis","Amy","Joe","olivia","thomas","Holly","callum","caitlin","David","Jessica","josh ","Rebecca","Jake","Georgia","Harry","Sarah","Liam","Beth","William","molly ","luke","Bethany","Kieran","Grace","connor","Laura","George","Rachel","charlie","Shannon","joshua","Jess ","Jamie","Alice","michael","ella","nathan","Abbie","Scott","Jade","oliver","Anna","jordan","Amber","Chris","leah","john","Rosie","Henry","Lily","ethan","jasmine","Dan","Mia","Matt","Zoe","Robert","Niamh","Cameron","phoebe","Mark","kate","Joseph","courtney","sean","Becky","Stephen","Erin","jacob","Louise","Samuel","elizabeth","jason","lydia","Max","danielle ","Richard","Natalie ","Reece","Charlie","Aaron","Eleanor","andrew","Nicole","Alexander","Eve","dylan","Poppy","jay","Daisy","morgan","Ruby","Brandon","Amelia","Tyler","katy","Will","Kirsty","Paul","natasha","Edward","Paige","kyle","Izzy","Anthony","alex","Jonathan ","Gemma","Peter","Evie","shaun","heather","Alfie","Aiméè","declan","Freya","rhys","kayleigh","Kian","Abigail","Isaac","Abby","Owen","Victoria","Bradley","Imogen","Toby","Melissa","mike","chelsea","louis","Jodie","Patrick","Rachael","Gabriel","Libby","billy","Ciara","Kai","Robyn","Ross","Samantha","Danny","Catherine","steven","Isabella","Elliot","Jennifer","oscar","Mollie","Sebastian","bethan","Finlay","Maddie","Benjamin","Mary","Christopher","Jenny","robbie","Bella","Nick","tia","zak","Millie","Nathaniel","Sophia","Harvey","Ellen","Finn","Hollie","Joel","Helen","tristan","Naomi","Aidan","Ashleigh","Lucas","Alisha","tommy"],
+
+    after: function(item){
+        return item.charAt(0).toUpperCase()+item.slice(1);
+    }
+};
+
+},{}],62:[function(require,module,exports){
+arguments[4][11][0].apply(exports,arguments)
+},{"dup":11}],63:[function(require,module,exports){
+var en_GB = {};
+module['exports'] = en_GB;
+en_GB.address          =   require('./address');
+en_GB.city             =   require('./city');
+en_GB.country          =   require('./country');
+en_GB.first_name       =   require('./first_name');
+en_GB.postcode         =   require('./postcode');
+en_GB.state            =   require('./state');
+en_GB.street           =   require('./street');
+en_GB.sur_name         =   require('./sur_name');
+en_GB.gender           =   require('./gender');
+en_GB.company          =   require('./company');
+en_GB.company_suffix   =   require('./company/company_suffix');
+en_GB.cell_phone       =   require('./cell_phone');
+en_GB.phone            =   require('./phone');
+
+},{"./address":55,"./cell_phone":56,"./city":57,"./company":59,"./company/company_suffix":58,"./country":60,"./first_name":61,"./gender":62,"./phone":64,"./postcode":65,"./state":66,"./street":67,"./sur_name":68}],64:[function(require,module,exports){
+module['exports'] = {
+    items: ['(072#) #########', '(073##) #######', '+44-72#-#######',  '+44-73##-########']
+}
+
+},{}],65:[function(require,module,exports){
+module['exports'] = {
+    items: ['SW#A #AA', 'EC#A #BB', 'M# #AE', 'DN## #PT']
+}
+
+},{}],66:[function(require,module,exports){
+module['exports'] = {
+    items: ["Aberconwy and Colwyn","Aberdeen City","Aberdeenshire","Anglesey","Angus","Antrim","Argyll and Bute","Armagh","Avon","Ayrshire","Bath and NE Somerset","Bedfordshire","Belfast","Berkshire","Berwickshire","BFPO","Blaenau Gwent","Buckinghamshire","Caernarfonshire","Caerphilly","Caithness","Cambridgeshire","Cardiff","Cardiganshire","Carmarthenshire","Ceredigion","Channel Islands","Cheshire","City of Bristol","Clackmannanshire","Clwyd","Conwy","Cornwall/Scilly","Cumbria","Denbighshire","Derbyshire","Derry/Londonderry","Devon","Dorset","Down","Dumfries and Galloway","Dunbartonshire","Dundee","Durham","Dyfed","East Ayrshire","East Dunbartonshire","East Lothian","East Renfrewshire","East Riding Yorkshire","East Sussex","Edinburgh","England","Essex","Falkirk","Fermanagh","Fife","Flintshire","Glasgow","Gloucestershire","Greater London","Greater Manchester","Gwent","Gwynedd","Hampshire","Hartlepool","HAW","Hereford and Worcester","Hertfordshire","Highlands","Inverclyde","Inverness-Shire","Isle of Man","Isle of Wight","Kent","Kincardinshire","Kingston Upon Hull","Kinross-Shire","Kirklees","Lanarkshire","Lancashire","Leicestershire","Lincolnshire","Londonderry","Merseyside","Merthyr Tydfil","Mid Glamorgan","Mid Lothian","Middlesex","Monmouthshire","Moray","Neath & Port Talbot","Newport","Norfolk","North Ayrshire","North East Lincolnshire","North Lanarkshire","North Lincolnshire","North Somerset","North Yorkshire","Northamptonshire","Northern Ireland","Northumberland","Nottinghamshire","Orkney and Shetland Isles","Oxfordshire","Pembrokeshire","Perth and Kinross","Powys","Redcar and Cleveland","Renfrewshire","Rhonda Cynon Taff","Rutland","Scottish Borders","Shetland","Shropshire","Somerset","South Ayrshire","South Glamorgan","South Gloucesteshire","South Lanarkshire","South Yorkshire","Staffordshire","Stirling","Stockton On Tees","Suffolk","Surrey","Swansea","Torfaen","Tyne and Wear","Tyrone","Vale Of Glamorgan","Wales","Warwickshire","West Berkshire","West Dunbartonshire","West Glamorgan","West Lothian","West Midlands","West Sussex","West Yorkshire","Western Isles","Wiltshire","Wirral","Worcestershire","Wrexham","York"]
+};
+
+},{}],67:[function(require,module,exports){
+module['exports'] = {
+    items: ["High Street","Station Road","Main Street","Park Road","Church Road","Church Street","London Road","Victoria Road","Green Lane","Manor Road","Church Lane","Park Avenue","The Avenue","The Crescent","Queens Road","New Road","Grange Road","Kings Road","Kingsway","Windsor Road","Highfield Road","Mill Lane","Alexander Road","York Road","St. John’s Road","Main Road","Broadway","King Street","The Green","Springfield Road","George Street","Park Lane","Victoria Street","Albert Road","Queensway","New Street","Queen Street","West Street","North Street","Manchester Road","The Grove","Richmond Road","Grove Road","South Street","School Lane","The Drive","North Road","Stanley Road","Chester Road","Mill Road"]
+};
+
+},{}],68:[function(require,module,exports){
+module['exports'] = {
+    items: ["Smith","Jones","Taylor","Brown","Williams","Wilson","Johnson","Davies","Patel","Robinson","Wright","Thompson","Evans","Walker","White","Roberts","Green","Hall","Thomas","Clarke","Jackson","Wood","Harris","Edwards","Turner","Martin","Cooper","Hill","Ward","Hughes","Moore","Clark","King","Harrison","Lewis","Baker","Lee","Allen","Morris","Khan","Scott","Watson","Davis","Parker","James","Bennett","Young","Phillips","Richardson","Mitchell","Bailey","Carter","Cook","Singh","Shaw","Bell","Collins","Morgan","Kelly","Begum","Miller","Cox","Hussain","Marshall","Simpson","Price","Anderson","Adams","Wilkinson","Ali","Ahmed","Foster","Ellis","Murphy","Chapman","Mason","Gray","Richards","Webb","Griffiths","Hunt","Palmer","Campbell","Holmes","Mills","Rogers","Barnes","Knight","Matthews","Barker","Powell","Stevens","Kaur","Fisher","Butler","Dixon","Russell","Harvey","Pearson","Graham","Fletcher","Murray","Howard","Shah","Gibson","Gill","Fox","Stewart","Elliott","Lloyd","Andrews","Ford","Owen","West","Saunders","Reynolds","Day","Walsh","Brooks","Atkinson","Payne","Cole","Bradley","Spencer","Pearce","Burton","Lawrence","Dawson","Ball","Rose","Booth","Grant","Wells","Watts","Hudson","Hart","Armstrong","Perry","Newman","Jenkins","Hunter","Webster","Lowe","Francis","Page","Hayes","Carr","Marsh","Stone","Riley","Woods","Gregory","Barrett","Berry","Dunn","Newton","Holland","Porter","Oliver","Ryan","Reid","Williamson","Parsons","OBrien","Bird","Robertson","Reed","Bates","Dean","Walton","Hawkins","Cooke","Harding","Ross","Henderson","Kennedy","Gardner","Lane","Burns","Bishop","Burgess","Shepherd","Nicholson","Freeman","Cross","Hamilton","Hodgson","Warren","Sutton","Harper","Yates","Nicholls","Robson","Chambers","Hardy","Curtis","Moss","Long","Akhtar","Coleman","McDonald","Sharp","Potter","Jordan","George","Osborne","Gilbert","May","Hammond","Gordon","Stevenson","Hutchinson","Wheeler","Wallace","Rowe","Willis","Read","Johnston","Mann","Stephenson","Miles","Barber","Arnold","Byrne","Griffin","Slater","Nelson","Frost","Austin","Hewitt","Buckley","Baxter","McCarthy","Whitehead","Higgins","O`Connor","Lambert","Hopkins","Barton","Greenwood","Burke","Blake","Clayton","O`Neill","Goodwin","Doyle","Woodward","Bond","Kemp","Holt","Thomson","Nash","Banks","Lawson","Miah","Davidson","Middleton","Cunningham","Barnett","Jennings","Heath","Walters","Poole","French","Parry","Bibi","Fowler","Watkins","Jarvis","Lynch","Quinn","Sullivan","Stanley","Norman","Stephens","Hartley","Rahman","Alexander","Lucas","Morton","Peters","Knowles","Dickinson","Douglas","Field","Morrison","Preston","Stokes","Simmons","Black","Gallagher","Barlow","Briggs","Gibbs","Todd","Tucker","Townsend","Ferguson","Parkinson","Burrows","Thornton","Hayward","Pritchard","Rhodes","Thorpe","Fuller","Holden","Baldwin","Reeves","Lamb","Norris","Sanders","Tomlinson","MacDonald","Hancock","Kent","Dale","Ashton","Howe","Abbott","Davison","Glover","Kirby","Carroll","Weston","Kay","Kirk","Whittaker","Birch","Morley","Mistry","Daniels","Goddard","Bryant","Dobson","Savage","Davey","Perkins","Warner","Skinner","Bartlett","Brookes","Cartwright","Iqbal","Archer","Fraser","Sanderson","Bradshaw","Atkins","Smart","Bull","Rees","Bentley","Patterson","Bolton","Haynes","Wilkins","Mahmood","Law","Little","Wade","Malik","Howell","Schofield","Sharma","Dodd","Houghton","Butcher","Crawford","Hicks","Henry","Wall","Short","Giles","Duncan","Coates","Manning","Noble","Clements","Duffy","Sykes","Gould","Brennan","Farrell","Vaughan","Waters","Sheppard","Gibbons","Finch","Winter","Naylor","Franklin","Flynn","Garner","Steele","Dyer","Marsden","Hooper","Vincent","Mohammed","Joyce","Horton","Sharpe","Hobbs","Pickering","Humphreys","Dennis","Kerr","Fleming","Hurst","Coles","Leach","Pratt","Randall","Moran","Howarth","Connolly","Peacock","Sinclair","Herbert","Swift","Carpenter","Chandler","Chadwick","Blackburn","Pollard","Norton","Hale","Browne","Pugh","Hilton","Welch","Faulkner","Parkin","Hanson","Kumar","Lyons","Cameron","Turnbull","Collier","Allan","Bryan","Benson","Doherty","Charlton","Wallis","Chamberlain","Myers","Tyler","Conway","Nixon","Paul","Metcalfe","Whitehouse","O`Sullivan","Gardiner","Lord","Joseph","Jacobs","Rice","Rowley","Bowen","North","FitzGerald","Godfrey","Holloway","Bray","Hope","Talbot","Gough","Connor","Hyde","Farmer","Storey","Potts","Nolan","Bruce","John","Butt","Donnelly","McKenzie","Hargreaves","Brady","Parkes","Hassan","Forster","Pope","Eaton","Sims","Rowland","Craig","Hirst","Lees","McLean","Boyle","Greaves","Summers","Mellor","Wyatt","Rigby","Daly","Owens","Power","Ingram","Simmonds","Fry","Wild","Uddin","Gale","Neal","Vickers","Marriott","Bradbury","Humphries","Goodman","Waller","Wong","Charles","Cullen","Spence","Best","Islam","Ratcliffe","Barry","Massey","Stubbs","Bullock","Carey","Beaumont","Boyd","Groves","Chan","Sadler","Leonard","Terry","Rayner","Bateman","Ahmad","Hills","Bowden","Weaver","Hodges","Pike","Clifford","Reeve","Paterson","MacKenzie","Dalton","FitzPatrick","Welsh","Small","Guest","Wills","Rodgers","Webber","Thorne","Barnard","Underwood","Stacey","Sweeney","Allison","Langley","McKenna","O`Donnell","Woodcock","Woolley","Kenny","Hogg","Prince","Drew","Bi","Oakley","Beard","Harrington","Kendall","Firth","Lawton","Parr","Draper","Hobson","Beckett","Lacey","McDermott","Casey","Horne","Bacon","Humphrey","Lancaster","Bourne","Neale","Jeffery","Betts","Dyson","Mercer","Seymour","Bedford","Crook","Guy","Reilly","Brook","Gee","Plant","Burnett","Lock","Bowman","Leigh","Wilkes","Croft","Wheatley","McMahon","Hubbard","Ashworth","Drake","Nichols","Stuart","Salmon","Partridge","Proctor","Sutcliffe","Johns","Prior","Moody","Clarkson","Woodhouse","Maguire","McGrath","Platt","Chowdhury","Corbett","Haigh","Harwood","Lake","Emery","Street","Lindsay","Cotton","Baines","Marks","Haines","Brewer","Crane","Park","Bevan","Latham","Hutton","Stafford","Lister","Sandhu","Stanton","Beck","McCann","Rashid","Milner","Brett","Hull","Sewell","Haywood","Bush","Parmar","Cope","Aldridge","Hood","Waite","Bowers","McKay","Smyth","Wakefield","Johnstone","Steel","Tate","Dickson","Ray","Mead","Daniel","England","Maxwell","English","Head","Whiting","Whittle","Andrew","Garrett","Keen","Whitfield","Dunne","Butterworth","Dutton","Senior","Stott","Goodall","Cummings","Westwood","Wainwright","Britton","Swain","Stringer","Hickman","Needham","Cannon","McLaughlin","Roe","Ridley","Sutherland","Searle","Lockwood","Love","Fenton","Mansfield","Foley","Atherton","Davenport","Masters","Grainger","Hallam","Hatton","Callaghan","Ryder","Cohen","Chappell","Kershaw","Armitage","Wilcox","Lovell","Whelan","Howes","Radford","Newell","Childs","Choudhury","Li","Darby","Cousins","Clegg","Whitaker","Burt","Irving","Salter","Coulson","Mortimer","Ireland","Buck","Bright","Forbes","Hodson","Blackwell","Denton","Bannister","Dodds","Adamson","Mather","Edge","Bland","Crossley","Rimmer","Nicholas","Bradford","Jenkinson","Nunn","Golding","Wardle","Wilde","Forrest","Roper","McLoughlin","Mohamed","Ellison","Slade","Healey","Church","Kane","Tanner","Kavanagh","Sawyer","Clay","Bayliss","Boulton","Barratt","Barrow","Cassidy","Meredith","Appleby","Biggs","O`Connell","Piper","Singleton","Downes","Donovan","Cairns","Upton","Khatun","Flanagan","Cain","Ogden","Richmond","Farrow","Rushton","Dent","Crowther","McCabe","Cowley","Ashley","Worthington","Monk","O`Reilly","MacKay","Pitt","Robbins","Lilley","Warburton","Heaton","Ayres","Ritchie","Rutherford","Drury","Hogan","Hutchings","Fawcett","Donaldson","Aston","Sampson","Christie","Moon","Hough","Wise","McIntyre","Calvert","Hodge","Regan","Patrick","Barr","Eastwood","Logan","Broughton","Handley","Nuttall","Amin","Hardman","Munro","Oakes","Batchelor","Curran","McCormack","Preece","Lea","Castle","Rawlings","Lester","Watt","Milne","Hawkes","Beech","Shields","Ashby","Goldsmith","Stead","Flint","Maynard","Millar","Bainbridge","Buxton","Rowlands","Dudley","Maher","Bridge","Sumner","Daley","Blair","Fielding","Bridges","Peck","Chauhan","Lomas","McIntosh","Hadley","Millard","Mooney","Ingham","Amos","Mehta","Horner","Deacon","Craven","Vernon","Hulme","Curry","Worrall","McGowan","Coe","Howells","Deakin","Rudd","Everett","McLeod","Simms","Appleton","Holder","Rutter","Ash","Kidd","Higgs","Fryer","Nightingale","Dawes","Tait","Currie","Gunn","Dowling","Lodge","Halliday","Clare","Bingham","Kaye","Walmsley","Bowles","Hackett","Grundy","Langford","Fellows","Beattie","Kenyon","Knott","Bone","Lang","Durrant","Delaney","Hay","Weeks","Costello","Sheldon","Harman","Ainsworth","Priestley","Molloy","Hoare","Robins","Rehman","Hampson","Avery","Rooney","Millington","Coombes","Bristow","Hodgkinson","Fernandes","Boyce","Ashcroft","Phipps","Meadows","Sherwood","McNally","Marchant","McDonnell","Cresswell","Egan","Downing","Finn","Healy","Peel","Cowan","Edmonds","Squires","Wharton","Sheikh","Barron","Snell","Graves","Millward","Ballard","Clough","Hibbert","Prescott","Dillon","Duggan","McGregor","Sheridan","Connell","Hurley","Dhillon","Jamieson","Skelton","McCormick","Bower","Rai","Swan","Aslam","Franks","Sharman","Percival","O`Shea","Bassett","McMillan","Leech","Muir","East","Arthur","Madden","Broadbent","Pennington","Sargent","Heywood"]
+};
+
+},{}],69:[function(require,module,exports){
 function ug(loadedLocales, locale){
     let self    =   this;
 
@@ -646,7 +732,9 @@ function ug(loadedLocales, locale){
 
         const items =   self.loadItems(folder, locale, parameter);
 
-        return self.getRandomItem(items, locale);
+        let item    =   self.getRandomItem(items, locale);
+
+        return self.loadAfterHook(item, folder, locale);
     }
 
     self.address    =   function(locale){
@@ -779,6 +867,26 @@ function ug(loadedLocales, locale){
         }
 
         return new Date(start.getTime() + Math.random() * (end.getTime() - start.getTime()));
+    }
+
+    self.loadAfterHook  =   function(item, folder, locale){
+        if(!locale){
+            locale  =   self.locale;
+        }
+
+        if(!self.loadedLocales[locale] || !self.loadedLocales[locale][folder]){
+            if(!self.loadedLocales[self.fallbackLocale] || !self.loadedLocales[self.fallbackLocale][folder]){
+                throw 'folder "'+folder+'" by locale "'+locale+'" not available';
+            } else {
+                locale  =   this.fallbackLocale;
+            }
+        }
+
+        if(self.loadedLocales[locale][folder].hasOwnProperty('after')){
+            return self.loadedLocales[locale][folder].after(item);
+        }
+
+        return item;
     }
 
     self.loadItems  =   function(folder, locale, parameter = null){

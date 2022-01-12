@@ -8,7 +8,8 @@ function Construct(locale){
     self.loadedLocales  =   {
         'de':       require('./locales/de'),
         'af_ZA':    require('./locales/af_ZA'),
-        'ar':       require('./locales/ar')
+        'ar':       require('./locales/ar'),
+        'en_GB':    require('./locales/en_GB'),
     };
 
     if(!self.loadedLocales[locale]){

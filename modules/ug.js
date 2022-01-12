@@ -26,7 +26,9 @@ function ug(loadedLocales, locale){
 
         const items =   self.loadItems(folder, locale, parameter);
 
-        return self.getRandomItem(items, locale);
+        let item    =   self.getRandomItem(items, locale);
+
+        return self.loadAfterHook(item, folder, locale);
     }
 
     self.address    =   function(locale){
@@ -159,6 +161,26 @@ function ug(loadedLocales, locale){
         }
 
         return new Date(start.getTime() + Math.random() * (end.getTime() - start.getTime()));
+    }
+
+    self.loadAfterHook  =   function(item, folder, locale){
+        if(!locale){
+            locale  =   self.locale;
+        }
+
+        if(!self.loadedLocales[locale] || !self.loadedLocales[locale][folder]){
+            if(!self.loadedLocales[self.fallbackLocale] || !self.loadedLocales[self.fallbackLocale][folder]){
+                throw 'folder "'+folder+'" by locale "'+locale+'" not available';
+            } else {
+                locale  =   this.fallbackLocale;
+            }
+        }
+
+        if(self.loadedLocales[locale][folder].hasOwnProperty('after')){
+            return self.loadedLocales[locale][folder].after(item);
+        }
+
+        return item;
     }
 
     self.loadItems  =   function(folder, locale, parameter = null){
