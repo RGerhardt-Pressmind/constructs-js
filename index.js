@@ -1,2 +1,2 @@
-var Construct = require('./construct');
-module['exports'] = Construct;
+var Constructs = require('./constructs');
+module['exports'] = Constructs;

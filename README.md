@@ -1,9 +1,9 @@
-# construct.js - creates extremely large amount of random data for browser and node.js
+# constructs.js - creates extremely large amount of random data for browser and node.js
 
 <img src="https://uniqgenerator.s3-eu-west-1.amazonaws.com/logo_transparent_background.png" width="250">
 
 ## Demo
-[https://rgerhardt-pressmind.github.io/construct.js](https://rgerhardt-pressmind.github.io/construct.js)
+[https://rgerhardt-pressmind.github.io/constructs.js](https://rgerhardt-pressmind.github.io/constructs.js)
 
 ![locales](https://img.shields.io/badge/locales-10-blue)
 
@@ -11,29 +11,29 @@
 
 ### Browser
 ```html
-<script src = "dist/construct.min.js" type = "text/javascript"></script>
+<script src = "dist/constructs.min.js" type = "text/javascript"></script>
 <script>
-    var construct = new construct("de"); // de = locale (fallback locale is "de")
+    var constructs = new constructs("de"); // de = locale (fallback locale is "de")
 
-    let uniqFirstName = construct.ug.get('first_name'); // Maik
-    let uniqSurName   = construct.ug.get('sur_name'); // Raschel
-    let uniqEmail     = construct.ug.get('email'); // max@gmail.com
+    let uniqFirstName = constructs.ug.get('first_name'); // Maik
+    let uniqSurName   = constructs.ug.get('sur_name'); // Raschel
+    let uniqEmail     = constructs.ug.get('email'); // max@gmail.com
 </script>
 ```
 
 ### NodeJS
 ```javascript
-const Construct    =   require('./construct');
-let construct      =   new Construct('de'); // de = locale (fallback locale is "de")
+const Constructs    =   require('./construct');
+let construct      =   new Constructs('de'); // de = locale (fallback locale is "de")
 
-let first_name = construct.ug.get('first_name');
-let sur_name   = construct.ug.get('sur_name');
-let email      = construct.ug.get('email');
+let first_name = constructs.ug.get('first_name');
+let sur_name   = constructs.ug.get('sur_name');
+let email      = constructs.ug.get('email');
 ```
 
 ## Usage template
 
-construct.js can generate multiple random data at once based on object templates. These data packages can then be used e.g. for grids or displays.
+constructs.js can generate multiple random data at once based on object templates. These data packages can then be used e.g. for grids or displays.
 
 ### Example
 ```javascript
@@ -76,7 +76,7 @@ let template = {
     }
 };
 
-let generatedData = construct.generateUniqData(template);
+let generatedData = constructs.generateUniqData(template);
 
 console.log(generatedData);
 ```
@@ -140,7 +140,7 @@ console.log(generatedData);
 #### address
 Generate random address. The structure of the address depends on the respective locale.
 ```javascript
-let address = construct.ug.get('address');
+let address = constructs.ug.get('address');
 ```
 ```
 Am Neuenhof 53a, Baryllastadt 82559 Deutschland
@@ -151,7 +151,7 @@ Karlstr. 42b, Süd Emrescheid 07554 Deutschland
 #### building_number
 Generates a building number based on the defined scheme in locale.
 ```javascript
-let building_number = construct.ug.get('building_number');
+let building_number = constructs.ug.get('building_number');
 ```
 ```
 244
@@ -162,7 +162,7 @@ let building_number = construct.ug.get('building_number');
 #### cell_phone
 Creates a random cell phone number based on the scheme in locale.
 ```javascript
-let cell_phone = construct.ug.get('cell_phone');
+let cell_phone = constructs.ug.get('cell_phone');
 ```
 ```
 +49-152-1664339
@@ -172,7 +172,7 @@ let cell_phone = construct.ug.get('cell_phone');
 #### city
 Generates a fictitious city name based on the first name and last name list from the locales.
 ```javascript
-let city = construct.ug.get('city');
+let city = constructs.ug.get('city');
 ```
 ```
 Jankescheid
@@ -183,7 +183,7 @@ Gregerdorf
 #### company
 Generates a fictitious company name based on the first name and last name list from locales.
 ```javascript
-let company = construct.ug.get('company');
+let company = constructs.ug.get('company');
 ```
 ```
 Loogen GmbH
@@ -194,7 +194,7 @@ Noack GmbH & Co KG
 #### country
 Returns a random country which is stored in locale
 ```javascript
-let country = construct.ug.get('country');
+let country = constructs.ug.get('country');
 ```
 ```
 Deutschland
@@ -203,7 +203,7 @@ Deutschland
 #### email
 Returns a random email address based on a random last name from the locale and a random defined domain.
 ```javascript
-let email = construct.ug.get('email');
+let email = constructs.ug.get('email');
 ```
 ```
 Micha@gmail.com
@@ -213,7 +213,7 @@ Frenke@yahoo.com
 #### first_name
 Returns a random first name from the list of locales.
 ```javascript
-let first_name = construct.ug.get('first_name');
+let first_name = constructs.ug.get('first_name');
 ```
 ```
 Maxel
@@ -224,7 +224,7 @@ Ben
 #### gender
 Returns a random salutation based on the locale. 
 ```javascript
-let gender = construct.ug.get('gender');
+let gender = constructs.ug.get('gender');
 ```
 ```
 Herr
@@ -235,12 +235,12 @@ Diverses
 #### image
 Returns a random image based on the type in the local. By default the type "avatar" is set.  The images have a maximum size of 500x500 pixels.
 ```javascript
-let animal  = construct.ug.get('image', {type: 'animal'});
-let avatar  = construct.ug.get('image');
-let city    = construct.ug.get('image', {type: 'city'});
-let human   = construct.ug.get('image', {type: 'human'});
-let nature  = construct.ug.get('image', {type: 'nature'});
-let technic = construct.ug.get('image', {type: 'technic'});
+let animal  = constructs.ug.get('image', {type: 'animal'});
+let avatar  = constructs.ug.get('image');
+let city    = constructs.ug.get('image', {type: 'city'});
+let human   = constructs.ug.get('image', {type: 'human'});
+let nature  = constructs.ug.get('image', {type: 'nature'});
+let technic = constructs.ug.get('image', {type: 'technic'});
 ```
 
 Animal
@@ -259,8 +259,8 @@ Technic
 #### loremIpsum
 Returns a random sentence based on the words from the "Lorem ipsum" text. The number of words can be limited/extended by the "words" parameter.
 ```javascript
-let loremIpsum      = construct.ug.get('loremIpsum'); // return default 60 words
-let loremIpsum10    = construct.ug.get('loremIpsum', {words: 10}); // return 10 words
+let loremIpsum      = constructs.ug.get('loremIpsum'); // return default 60 words
+let loremIpsum10    = constructs.ug.get('loremIpsum', {words: 10}); // return 10 words
 ```
 ```
 60 words:
@@ -273,7 +273,7 @@ Sadipscing elitr aliquam est et accusam sadipscing assum eum molestie.
 #### name
 Returns a random name based on the first name and last name list of the locale. Titles (doctor or professor) can also precede the names. 
 ```javascript
-let name      = construct.ug.get('name');
+let name      = constructs.ug.get('name');
 ```
 ```
 Enes Kette
@@ -284,7 +284,7 @@ Dr. Vito Kempter
 #### phone
 Returns a randomly generated phone number based on the local scheme.
 ```javascript
-let phone      = construct.ug.get('phone');
+let phone      = constructs.ug.get('phone');
 ```
 ```
 (0183) 837993227
@@ -296,7 +296,7 @@ let phone      = construct.ug.get('phone');
 #### postcode
 Returns a random zip code based on the locale.
 ```javascript
-let postcode      = construct.ug.get('postcode');
+let postcode      = constructs.ug.get('postcode');
 ```
 ```
 03884
@@ -307,7 +307,7 @@ let postcode      = construct.ug.get('postcode');
 #### state
 Returns a random state based on the locale.
 ```javascript
-let state      = construct.ug.get('state');
+let state      = constructs.ug.get('state');
 ```
 ```
 Thüringen
@@ -318,7 +318,7 @@ Niedersachsen
 #### street
 Returns a random street based on the locale.
 ```javascript
-let street      = construct.ug.get('street');
+let street      = constructs.ug.get('street');
 ```
 ```
 Friedrich-List-Str.
@@ -329,7 +329,7 @@ Montanusstr.
 #### sur_name
 Returns a random surname based on the locale.
 ```javascript
-let sur_name      = construct.ug.get('sur_name');
+let sur_name      = constructs.ug.get('sur_name');
 ```
 ```
 Bremser
@@ -340,7 +340,7 @@ Lott
 #### title
 Returns a random title based on the locale.
 ```javascript
-let title      = construct.ug.get('title');
+let title      = constructs.ug.get('title');
 ```
 ```
 Dr.

@@ -1,5 +1,5 @@
-(function(f){if(typeof exports==="object"&&typeof module!=="undefined"){module.exports=f()}else if(typeof define==="function"&&define.amd){define([],f)}else{var g;if(typeof window!=="undefined"){g=window}else if(typeof global!=="undefined"){g=global}else if(typeof self!=="undefined"){g=self}else{g=this}g.construct = f()}})(function(){var define,module,exports;return (function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){
-function Construct(locale){
+(function(f){if(typeof exports==="object"&&typeof module!=="undefined"){module.exports=f()}else if(typeof define==="function"&&define.amd){define([],f)}else{var g;if(typeof window!=="undefined"){g=window}else if(typeof global!=="undefined"){g=global}else if(typeof self!=="undefined"){g=self}else{g=this}g.constructs = f()}})(function(){var define,module,exports;return (function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){
+function Constructs(locale){
     let self    =   this;
 
     if(!locale){
@@ -249,13 +249,13 @@ function Construct(locale){
     }
 }
 
-module['exports']  =   Construct;
+module['exports']  =   Constructs;
 
 },{"./locales/af_ZA":12,"./locales/ar":26,"./locales/de":46,"./locales/en_GB":63,"./modules/ug":69}],2:[function(require,module,exports){
-var Construct = require('./construct');
-module['exports'] = Construct;
+var Constructs = require('./constructs');
+module['exports'] = Constructs;
 
-},{"./construct":1}],3:[function(require,module,exports){
+},{"./constructs":1}],3:[function(require,module,exports){
 module['exports']  =   {
     items: ['[STREET_NUMBER] [STREET], [CITY] [ZIP_CODE] [COUNTRY]']
 };
@@ -292,7 +292,11 @@ module['exports']  =   {
 
 },{}],10:[function(require,module,exports){
 module['exports'] =   {
-    items: ["Sarah","William","Chloë","David","Olivia ","Ethan","Hannah","Shane ","Megan","Joshua","Jess","Cameron","Haajarah","Tim","Maria","Armand","Rachel","Luke","Caitlin","Meyer Bosman","Rebecca","Brendan","Ammaarah","Matt","Emma","Junior","Tallulah","Thomas","Michelle","Gyan","Jenna","xavier","Lisa ","Lawrence","Nina","Johann","Tanja","Corey","esther","Andrianantenaina","Zoe","Andre","Samantha","Ebrahim","Natalie","isaac","Kayla","James","Ella","Ryan","Mia","Calvin","Laila","Andrew","Leah","Reiner","Genevieve","Reinhardt","Malaika","fedinkgoeng","Amy","Nkwabi","Mishka","Abdul Mueed","Sameera ","kubo","Anita","Amaury","Ruby","Jannie","Angelica","Neil","Courtney","Oshalan Govender","Kimberly","kreeasen","Michaela","Bryan","Beth","kiritsugi","Abbi","Stefan","Princess","Joe","laura","Ongama","Danya","Simon","Amber","Josh","Kendal","yeo","Caitlyn","Armel","Lucy","Finn","Catherine","Appolos","Kate","Gerry","Marita","Kayleb","Grace","Mo","Bianca","Nephtali","Chelsea","ronald","Melissa","Yash","Sophia","suraav","Lily","Michael","Gabriella","Keagan","Hanna","Ndumiso ","Shalom","3zz","Joanna","paul","Leigh","Ashwin","Elize","Ian","Jessame","Sharief","Tamia","Arnauld","nicole","Sylvester","cassidy","Dash","Palesa","Nkosinathi","vanessa","eric","Isla ","Nickus","Candice ","Dew","Gemma","Walt","Charlotte","Dennis","Jodi","Timothy","Amelie ","Razak","saajidah","Thaba","khensani","Kian","Bella","Pascal","Mikayla","Eddie","Gugulethu","paci","Talia","Ricardo","Sophie","Jesse","Georgie","Thandaza","kimberley","Emershan","Ntokozo","Alyasa","Julia","jemondre","Rethabile","Bayron","Annabelle","Sikhumbuzo","Emily","Larey","Daniella","Mac","Yanga","Brandon","Makanaka","Sbusiso","Lolli","Darrin","ayesha","Wklliam","claudia","Ameer","Alex","Panda","Jade","Assqne","Christina","Sarah","Nqobile","Siya","Fatima","Hezzy"]
+    items: ["Sarah","William","Chloë","David","Olivia ","Ethan","Hannah","Shane ","Megan","Joshua","Jess","Cameron","Haajarah","Tim","Maria","Armand","Rachel","Luke","Caitlin","Meyer Bosman","Rebecca","Brendan","Ammaarah","Matt","Emma","Junior","Tallulah","Thomas","Michelle","Gyan","Jenna","xavier","Lisa ","Lawrence","Nina","Johann","Tanja","Corey","esther","Andrianantenaina","Zoe","Andre","Samantha","Ebrahim","Natalie","isaac","Kayla","James","Ella","Ryan","Mia","Calvin","Laila","Andrew","Leah","Reiner","Genevieve","Reinhardt","Malaika","fedinkgoeng","Amy","Nkwabi","Mishka","Abdul Mueed","Sameera ","kubo","Anita","Amaury","Ruby","Jannie","Angelica","Neil","Courtney","Oshalan Govender","Kimberly","kreeasen","Michaela","Bryan","Beth","kiritsugi","Abbi","Stefan","Princess","Joe","laura","Ongama","Danya","Simon","Amber","Josh","Kendal","yeo","Caitlyn","Armel","Lucy","Finn","Catherine","Appolos","Kate","Gerry","Marita","Kayleb","Grace","Mo","Bianca","Nephtali","Chelsea","ronald","Melissa","Yash","Sophia","suraav","Lily","Michael","Gabriella","Keagan","Hanna","Ndumiso ","Shalom","3zz","Joanna","paul","Leigh","Ashwin","Elize","Ian","Jessame","Sharief","Tamia","Arnauld","nicole","Sylvester","cassidy","Dash","Palesa","Nkosinathi","vanessa","eric","Isla ","Nickus","Candice ","Dew","Gemma","Walt","Charlotte","Dennis","Jodi","Timothy","Amelie ","Razak","saajidah","Thaba","khensani","Kian","Bella","Pascal","Mikayla","Eddie","Gugulethu","paci","Talia","Ricardo","Sophie","Jesse","Georgie","Thandaza","kimberley","Emershan","Ntokozo","Alyasa","Julia","jemondre","Rethabile","Bayron","Annabelle","Sikhumbuzo","Emily","Larey","Daniella","Mac","Yanga","Brandon","Makanaka","Sbusiso","Lolli","Darrin","ayesha","Wklliam","claudia","Ameer","Alex","Panda","Jade","Assqne","Christina","Sarah","Nqobile","Siya","Fatima","Hezzy"],
+
+    after: function(item){
+        return item.charAt(0).toUpperCase()+item.slice(1);
+    }
 };
 
 },{}],11:[function(require,module,exports){
@@ -375,7 +379,11 @@ module['exports']  =   {
 
 },{}],24:[function(require,module,exports){
 module['exports'] =   {
-    items: ["Camila","franco","Sofia","Matías","Victoria","Joaquín","Paula","Martín","Agustina","juan","Julieta","Mauro","Micaela","Federico","Valentina","Lucas","Ana","Santiago","Maria","Ignacio ","Daiana ","Tomas","Martina","pablo","Natalia","Francisco","Laura","benjamin","Andrea","Nicolas","Lucia","pedro","Carolina","Marcos","Florencia","Gabriel","Juana","Fernando","Noelia","ezequiel","Sandra","Facundo","Flavia","daniel","Milagros","ilan","Daniela","valentin","Michelle","Agustin ","Evelyn","Guido","Felicitas","Sergio","catalina","Lautaro","Rebeca","Thiago","Belen","Gonzalo","Lara","Fabricio","ingrid","Thomas","Nadia","Isaias","Abril","Alex","Candela","Luciano","Romina","Ian","Eliana","leandro","Mariana","Fabian","Verónica","Mateo","Luz","Javier","cecilia","manuel","Tatiana","Gregorio","Rocio","Faustino","Mary","Juan Cruz","sol","David","Cintia","Clara","Paz","Edgardo","Magali","Cayetano","Gisela","aaron","Juliana","ezequiell","Steffy","Enrique","Tania ","yosefronaldos","Elizabeth","Brahian","Marina","Valen","Milena","Homero","Karina","hugo","Aldana","Victor","Gabriela","Jasmin","Zoé","Eduardo","Lola","Ivan","Alejandra","Alejando","ILEANA","Sebastian","Araceli","medi","Virginia","Benja","Celeste","Facundo M","Marianela","Rodri! ;)","Nerea","Caetano","valeria","Misael","Silvina","Tobias","macarena","Machiko","Agostina","Hernan","carla","kilian","oriana","Yuliza","Lucy","Paul","Lorena","dobby","julia","Moshe","Liliana","Rodrigo","Zahra","Augusto","Erica","Josef","Milenka","mayo","Mariela","Jacobo","Nicole","Alexander","Johanna","Juan Tomas","Melina","Nano","Caro","Emilio","Sasha","Frank","Sofi","Luca","Solange","Alfredo","rosario","Paulo","Angie","Kevin","Ivana","Cuthbert","Teresa","Mariano","Mora","mauricio","Paulina","Hari","Maite","Luis","Yesica","Uziel","Iara","Rafa","Jorgelina","alexis","Melany","Rodigo","Paola","aron"]
+    items: ["Camila","franco","Sofia","Matías","Victoria","Joaquín","Paula","Martín","Agustina","juan","Julieta","Mauro","Micaela","Federico","Valentina","Lucas","Ana","Santiago","Maria","Ignacio ","Daiana ","Tomas","Martina","pablo","Natalia","Francisco","Laura","benjamin","Andrea","Nicolas","Lucia","pedro","Carolina","Marcos","Florencia","Gabriel","Juana","Fernando","Noelia","ezequiel","Sandra","Facundo","Flavia","daniel","Milagros","ilan","Daniela","valentin","Michelle","Agustin ","Evelyn","Guido","Felicitas","Sergio","catalina","Lautaro","Rebeca","Thiago","Belen","Gonzalo","Lara","Fabricio","ingrid","Thomas","Nadia","Isaias","Abril","Alex","Candela","Luciano","Romina","Ian","Eliana","leandro","Mariana","Fabian","Verónica","Mateo","Luz","Javier","cecilia","manuel","Tatiana","Gregorio","Rocio","Faustino","Mary","Juan Cruz","sol","David","Cintia","Clara","Paz","Edgardo","Magali","Cayetano","Gisela","aaron","Juliana","ezequiell","Steffy","Enrique","Tania ","yosefronaldos","Elizabeth","Brahian","Marina","Valen","Milena","Homero","Karina","hugo","Aldana","Victor","Gabriela","Jasmin","Zoé","Eduardo","Lola","Ivan","Alejandra","Alejando","ILEANA","Sebastian","Araceli","medi","Virginia","Benja","Celeste","Facundo M","Marianela","Rodri! ;)","Nerea","Caetano","valeria","Misael","Silvina","Tobias","macarena","Machiko","Agostina","Hernan","carla","kilian","oriana","Yuliza","Lucy","Paul","Lorena","dobby","julia","Moshe","Liliana","Rodrigo","Zahra","Augusto","Erica","Josef","Milenka","mayo","Mariela","Jacobo","Nicole","Alexander","Johanna","Juan Tomas","Melina","Nano","Caro","Emilio","Sasha","Frank","Sofi","Luca","Solange","Alfredo","rosario","Paulo","Angie","Kevin","Ivana","Cuthbert","Teresa","Mariano","Mora","mauricio","Paulina","Hari","Maite","Luis","Yesica","Uziel","Iara","Rafa","Jorgelina","alexis","Melany","Rodigo","Paola","aron"],
+
+    after: function(item){
+        return item.charAt(0).toUpperCase()+item.slice(1);
+    }
 };
 
 },{}],25:[function(require,module,exports){
@@ -479,7 +487,6 @@ module['exports'] = {
     after: function(item){
         return item.charAt(0).toLowerCase()+item.slice(1);
     }
-
 }
 
 },{}],43:[function(require,module,exports){

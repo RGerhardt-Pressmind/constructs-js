@@ -1,4 +1,4 @@
-function Construct(locale){
+function Constructs(locale){
     let self    =   this;
 
     if(!locale){
@@ -248,4 +248,4 @@ function Construct(locale){
     }
 }
 
-module['exports']  =   Construct;
+module['exports']  =   Constructs;
