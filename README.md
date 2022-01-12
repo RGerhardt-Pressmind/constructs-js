@@ -3,7 +3,7 @@
 <img src="https://uniqgenerator.s3-eu-west-1.amazonaws.com/logo_transparent_background.png" width="250">
 
 ## Demo
-[https://rgerhardt-pressmind.github.io/constructs.js](https://rgerhardt-pressmind.github.io/constructs.js)
+[https://rgerhardt-pressmind.github.io/constructs-js](https://rgerhardt-pressmind.github.io/constructs-js)
 
 ![locales](https://img.shields.io/badge/locales-10-blue)
 
