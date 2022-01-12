@@ -1,0 +1,15 @@
+var ar = {};
+module['exports'] = ar;
+ar.address          =   require('./address');
+ar.city             =   require('./city');
+ar.country          =   require('./country');
+ar.first_name       =   require('./first_name');
+ar.postcode         =   require('./postcode');
+ar.state            =   require('./state');
+ar.street           =   require('./street');
+ar.sur_name         =   require('./sur_name');
+ar.gender           =   require('./gender');
+ar.company          =   require('./company');
+ar.company_suffix   =   require('./company/company_suffix');
+ar.cell_phone       =   require('./cell_phone');
+ar.phone            =   require('./phone');

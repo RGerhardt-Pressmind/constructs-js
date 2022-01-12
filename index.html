@@ -19,6 +19,7 @@
     <pre><code class="language-javascript">
 &#x3C;script src=&#x22;dist/construct.min.js&#x22; type=&#x22;text/javascript&#x22;&#x3E;&#x3C;/script&#x3E;
 
+var address           =   construct.ug.get('address');
 var building_number   =   construct.ug.get('building_number');
 var cell_phone        =   construct.ug.get('cell_phone');
 var city              =   construct.ug.get('city');
@@ -44,6 +45,7 @@ var title             =   construct.ug.get('title');
     </code></pre>
 
     <p>
+        <strong>address</strong>: <span id="address"></span><br>
         <strong>building_number</strong>: <span id="building_number"></span><br>
         <strong>cell_phone</strong>: <span id="cell_phone"></span><br>
         <strong>city</strong>: <span id="city"></span><br>
@@ -69,8 +71,9 @@ var title             =   construct.ug.get('title');
     </p>
 
     <script>
-        var construct   =   new construct('af_ZA');
+        var construct   =   new construct();
 
+        document.getElementById('address').innerText = construct.ug.get('address');
         document.getElementById('first_name').innerText = construct.ug.get('first_name');
         document.getElementById('sur_name').innerText = construct.ug.get('sur_name');
         document.getElementById('name').innerText = construct.ug.get('name');
