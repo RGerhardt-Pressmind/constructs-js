@@ -70,6 +70,9 @@
 ## Introduction
 
 ### Browser
+
+Download [latest stable](https://github.com/RGerhardt-Pressmind/constructs-js/tags) version.
+
 ```html
 <script src = "dist/constructs.min.js" type = "text/javascript"></script>
 <script>
@@ -82,6 +85,14 @@
 ```
 
 ### NodeJS
+
+Install
+```
+npm install constructs-js --save
+```
+
+Usage
+
 ```javascript
 const Constructs    =   require('./construct');
 let construct      =   new Constructs('de'); // de = locale (fallback locale is "de")
