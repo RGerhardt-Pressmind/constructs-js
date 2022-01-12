@@ -31,6 +31,12 @@ let sur_name   = constructs.ug.get('sur_name');
 let email      = constructs.ug.get('email');
 ```
 
+### locales available
+- **af_ZA** _(South Africa)_
+- **ar** _(Argentina)_
+- **de** _(Germany - **Fallback locale**)_
+- **en_GB** _(United Kingdom)_
+
 ## Usage template
 
 constructs.js can generate multiple random data at once based on object templates. These data packages can then be used e.g. for grids or displays.
