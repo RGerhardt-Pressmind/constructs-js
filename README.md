@@ -71,7 +71,7 @@
 
 ### Browser
 
-Download [latest stable](https://github.com/RGerhardt-Pressmind/constructs-js/releases) version.
+Download [latest stable](https://github.com/RGerhardt-Pressmind/constructs-js/releases/latest) version.
 
 ```html
 <script src = "dist/constructs.min.js" type = "text/javascript"></script>
