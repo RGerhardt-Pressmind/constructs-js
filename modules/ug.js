@@ -29,15 +29,11 @@ function ug(loadedLocales, locale){
         return self.getRandomItem(items, locale);
     }
 
-    self.building_number    =   function(locale){
-        return self.getRandomItem(self.loadItems('building_number', locale), locale, false);
-    }
-
     self.address    =   function(locale){
         let val         =   self.get('address', null, locale, true);
 
         const street    =   self.get('street', null, locale);
-        const bn        =   self.building_number(locale);
+        const bn        =   self.get('building_number', locale);
         const postcode  =   self.get('postcode', null, locale);
         const country   =   self.get('country', null, locale);
         const city      =   self.get('city', null, locale);
@@ -96,7 +92,7 @@ function ug(loadedLocales, locale){
         return self.generateRandomNumberByChar(self.schemaBuild(items[Math.floor(Math.random()*items.length)], locale), char, withZero);
     }
 
-    self.datetime   =   function(min = null, max = null){
+    self.datetime   =   function(max = null, min = null){
         const gd    =   self.generateDate(min, max);
 
         return gd.getFullYear()+'-'+((gd.getMonth() <= 8) ? '0' : '')+(gd.getMonth()+1)+'-'+((gd.getDate() <= 9) ? '0' : '')+gd.getDate()+' '+((gd.getHours() <= 9) ? '0' : '')+gd.getHours()+':'+((gd.getMinutes() <= 9) ? '0' : '')+gd.getMinutes()+':'+((gd.getSeconds() <= 9) ? '0' : '')+gd.getSeconds();
