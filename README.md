@@ -1,6 +1,6 @@
 # constructs.js - creates extremely large amount of random data for browser and node.js
 
-<img src="https://uniqgenerator.s3-eu-west-1.amazonaws.com/logo_transparent_background.png" width="250">
+<img src="https://d22kzm8dnmp26q.cloudfront.net/logo_transparent_background.png" width="250">
 
 ## Demo
 [https://rgerhardt-pressmind.github.io/constructs-js](https://rgerhardt-pressmind.github.io/constructs-js)
