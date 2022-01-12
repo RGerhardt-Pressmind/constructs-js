@@ -1,9 +1,14 @@
 function Construct(locale){
     let self    =   this;
 
+    if(!locale){
+        locale  =   'de';
+    }
+
     self.loadedLocales  =   {
-        'de': require('./locales/de'),
-        'af_ZA': require('./locales/af_ZA')
+        'de':       require('./locales/de'),
+        'af_ZA':    require('./locales/af_ZA'),
+        'ar':       require('./locales/ar')
     };
 
     if(!self.loadedLocales[locale]){
