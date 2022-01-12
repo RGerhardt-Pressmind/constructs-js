@@ -5,7 +5,7 @@
 ## Demo
 [https://rgerhardt-pressmind.github.io/constructs-js](https://rgerhardt-pressmind.github.io/constructs-js)
 
-![locales](https://img.shields.io/badge/locales-10-blue)
+![locales](https://img.shields.io/badge/locales%20available-4-blue)
 
 ## Introduction
 
