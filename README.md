@@ -7,6 +7,66 @@
 
 ![locales](https://img.shields.io/badge/locales%20available-4-blue)
 
+## Table of content
+- [Introduction](https://github.com/RGerhardt-Pressmind/constructs-js#introduction)
+  - [Browser](https://github.com/RGerhardt-Pressmind/constructs-js#browser)
+  - [NodeJS](https://github.com/RGerhardt-Pressmind/constructs-js#nodejs)
+  - [locales available](https://github.com/RGerhardt-Pressmind/constructs-js#locales-available)
+- [Usage template](https://github.com/RGerhardt-Pressmind/constructs-js#usage-template)
+  - [Example](https://github.com/RGerhardt-Pressmind/constructs-js#example)
+- [API](https://github.com/RGerhardt-Pressmind/constructs-js#api)
+  - [Standalone](https://github.com/RGerhardt-Pressmind/constructs-js#standalone)
+    - [address](https://github.com/RGerhardt-Pressmind/constructs-js#address)
+    - [building_number](https://github.com/RGerhardt-Pressmind/constructs-js#building_number)
+    - [cell_phone](https://github.com/RGerhardt-Pressmind/constructs-js#cell_phone)
+    - [city](https://github.com/RGerhardt-Pressmind/constructs-js#city)
+    - [company](https://github.com/RGerhardt-Pressmind/constructs-js#company)
+    - [country](https://github.com/RGerhardt-Pressmind/constructs-js#country)
+    - [email](https://github.com/RGerhardt-Pressmind/constructs-js#email)
+    - [first_name](https://github.com/RGerhardt-Pressmind/constructs-js#first_name)
+    - [gender](https://github.com/RGerhardt-Pressmind/constructs-js#gender)
+    - [image](https://github.com/RGerhardt-Pressmind/constructs-js#image)
+      - [animal example](https://github.com/RGerhardt-Pressmind/constructs-js#animal)
+      - [avatar example](https://github.com/RGerhardt-Pressmind/constructs-js#avatar)
+      - [city example](https://github.com/RGerhardt-Pressmind/constructs-js#city)
+      - [human example](https://github.com/RGerhardt-Pressmind/constructs-js#human)
+      - [nature example](https://github.com/RGerhardt-Pressmind/constructs-js#nature)
+      - [technic example](https://github.com/RGerhardt-Pressmind/constructs-js#technic)
+    - [loremIpsum](https://github.com/RGerhardt-Pressmind/constructs-js#loremipsum)
+    - [name](https://github.com/RGerhardt-Pressmind/constructs-js#name)
+    - [phone](https://github.com/RGerhardt-Pressmind/constructs-js#phone)
+    - [postcode](https://github.com/RGerhardt-Pressmind/constructs-js#postcode)
+    - [state](https://github.com/RGerhardt-Pressmind/constructs-js#state)
+    - [street](https://github.com/RGerhardt-Pressmind/constructs-js#street)
+    - [sur_name](https://github.com/RGerhardt-Pressmind/constructs-js#sur_name)
+    - [title](https://github.com/RGerhardt-Pressmind/constructs-js#title)
+  - [Template](https://github.com/RGerhardt-Pressmind/constructs-js#template)
+  - [Template masks](https://github.com/RGerhardt-Pressmind/constructs-js#template-masks)
+  - [Module functions](https://github.com/RGerhardt-Pressmind/constructs-js#module-functions)
+    - [\[ug:id\]](https://github.com/RGerhardt-Pressmind/constructs-js#ugid)
+    - [\[ug:date\]](https://github.com/RGerhardt-Pressmind/constructs-js#ugdate)
+    - [\[ug:datetime\]](https://github.com/RGerhardt-Pressmind/constructs-js#ugdatetime)
+    - [\[ug:diffYearNow\]](https://github.com/RGerhardt-Pressmind/constructs-js#ugdiffyearnow)
+    - [\[ug:address\]](https://github.com/RGerhardt-Pressmind/constructs-js#ugaddress)
+    - [\[ug:building_number\]](https://github.com/RGerhardt-Pressmind/constructs-js#ugbuilding_number)
+    - [\[ug:cell_phone\]](https://github.com/RGerhardt-Pressmind/constructs-js#ugcell_phone)
+    - [\[ug:city\]](https://github.com/RGerhardt-Pressmind/constructs-js#ugcity)
+    - [\[ug:company\]](https://github.com/RGerhardt-Pressmind/constructs-js#ugcompany)
+    - [\[ug:country\]](https://github.com/RGerhardt-Pressmind/constructs-js#ugcountry)
+    - [\[ug:email\]](https://github.com/RGerhardt-Pressmind/constructs-js#ugemail)
+    - [\[ug:first_name\]](https://github.com/RGerhardt-Pressmind/constructs-js#ugfirst_name)
+    - [\[ug:gender\]](https://github.com/RGerhardt-Pressmind/constructs-js#uggender)
+    - [\[ug:image\]](https://github.com/RGerhardt-Pressmind/constructs-js#ugimage)
+    - [\[ug:loremIpsum\]](https://github.com/RGerhardt-Pressmind/constructs-js#ugloremipsum)
+    - [\[ug:name\]](https://github.com/RGerhardt-Pressmind/constructs-js#ugname)
+    - [\[ug:phone\]](https://github.com/RGerhardt-Pressmind/constructs-js#ugphone)
+    - [\[ug:postcode\]](https://github.com/RGerhardt-Pressmind/constructs-js#ugpostcode)
+    - [\[ug:state\]](https://github.com/RGerhardt-Pressmind/constructs-js#ugstate)
+    - [\[ug:street\]](https://github.com/RGerhardt-Pressmind/constructs-js#ugstreet)
+    - [\[ug:sur_name\]](https://github.com/RGerhardt-Pressmind/constructs-js#ugsur_name)
+    - [\[ug:title\]](https://github.com/RGerhardt-Pressmind/constructs-js#ugtitle)
+
+
 ## Introduction
 
 ### Browser
@@ -249,18 +309,23 @@ let nature  = constructs.ug.get('image', {type: 'nature'});
 let technic = constructs.ug.get('image', {type: 'technic'});
 ```
 
-Animal
-<br><img width="200" src="https://d22kzm8dnmp26q.cloudfront.net/animal/15.jpg"><br>
-Avatar
-<br><img width="200" src="https://d22kzm8dnmp26q.cloudfront.net/avatar/33.jpg"><br>
-City
-<br><img width="200" src="https://d22kzm8dnmp26q.cloudfront.net/city/17.jpg"><br>
-Human
-<br><img width="200" src="https://d22kzm8dnmp26q.cloudfront.net/human/5.jpg"><br>
-Nature
-<br><img width="200" src="https://d22kzm8dnmp26q.cloudfront.net/nature/32.jpg"><br>
-Technic
-<br><img width="200" src="https://d22kzm8dnmp26q.cloudfront.net/technic/1.jpg"><br>
+##### Animal
+<img width="200" src="https://d22kzm8dnmp26q.cloudfront.net/animal/15.jpg">
+
+##### Avatar
+<img width="200" src="https://d22kzm8dnmp26q.cloudfront.net/avatar/33.jpg">
+
+##### City
+<img width="200" src="https://d22kzm8dnmp26q.cloudfront.net/city/17.jpg">
+
+##### Human
+<img width="200" src="https://d22kzm8dnmp26q.cloudfront.net/human/5.jpg">
+
+##### Nature
+<img width="200" src="https://d22kzm8dnmp26q.cloudfront.net/nature/32.jpg">
+
+##### Technic
+<img width="200" src="https://d22kzm8dnmp26q.cloudfront.net/technic/1.jpg">
 
 #### loremIpsum
 Returns a random sentence based on the words from the "Lorem ipsum" text. The number of words can be limited/extended by the "words" parameter.
