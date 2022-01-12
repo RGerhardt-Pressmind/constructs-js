@@ -1,4 +1,4 @@
-const Construct    =   require('./construct');
+const Construct    =   require('./constructs');
 var http = require('http');
 var fs = require('fs');
 
@@ -9,7 +9,7 @@ var app = http.createServer(function(req,res){
     }
     res.setHeader('Content-Type', 'application/json');
 
-    let construct   =   new Construct('de');
+    let construct   =   new Construct();
 
     res.end(construct.generateUniqData(JSON.parse(fs.readFileSync(__dirname+'/example.json', 'utf8'))));
 });
