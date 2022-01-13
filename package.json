@@ -1,6 +1,6 @@
 {
   "name": "constructs-js",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "A NodeJS based data generator. This returns an infinite amount of randomly generated data according to a structure or inserts it into a database system.",
   "contributors": [
     "Robbyn Gerhardt <r.gerhardt@team-braeutigam.de>"
@@ -15,6 +15,9 @@
   "scripts": {
     "start": "node main.js",
     "build": "browserify index.js -s constructs -o dist/constructs.js && minify dist/constructs.js > dist/constructs.min.js"
+  },
+  "publishConfig": {
+    "registry":"https://npm.pkg.github.com"
   },
   "keywords": [
     "nodejs",
