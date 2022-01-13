@@ -19,6 +19,8 @@
     <pre><code class="language-javascript">
 &#x3C;script src=&#x22;dist/constructs.min.js&#x22; type=&#x22;text/javascript&#x22;&#x3E;&#x3C;/script&#x3E;
 
+var constructs   =   new constructs();
+
 var address           =   constructs.ug.get('address');
 var building_number   =   constructs.ug.get('building_number');
 var cell_phone        =   constructs.ug.get('cell_phone');
@@ -71,7 +73,7 @@ var title             =   constructs.ug.get('title');
     </p>
 
     <script>
-        var constructs   =   new constructs('en_GB');
+        var constructs   =   new constructs();
 
         document.getElementById('address').innerText = constructs.ug.get('address');
         document.getElementById('first_name').innerText = constructs.ug.get('first_name');
