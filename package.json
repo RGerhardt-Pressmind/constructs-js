@@ -16,9 +16,6 @@
     "start": "node main.js",
     "build": "browserify index.js -s constructs -o dist/constructs.js && minify dist/constructs.js > dist/constructs.min.js"
   },
-  "publishConfig": {
-    "registry":"https://registry.npmjs.org"
-  },
   "keywords": [
     "nodejs",
     "javascript",
