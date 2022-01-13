@@ -17,13 +17,24 @@
     "build": "browserify index.js -s constructs -o dist/constructs.js && minify dist/constructs.js > dist/constructs.min.js"
   },
   "keywords": [
-    "uniq",
-    "text",
+    "nodejs",
+    "javascript",
     "generator",
     "random",
-    "mysql",
+    "template",
     "json",
-    "sql"
+    "angular",
+    "typescript",
+    "node",
+    "browser",
+    "unique",
+    "angular2",
+    "angular4",
+    "random generator",
+    "special data",
+    "locales",
+    "multilanguage data",
+    "large data generator"
   ],
   "license": "MIT",
   "devDependencies": {
