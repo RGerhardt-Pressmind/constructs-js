@@ -9,7 +9,7 @@
   "homepage": "https://rgerhardt-pressmind.github.io/constructs-js/",
   "repository": {
     "type": "git",
-    "url": "https://github.com/RGerhardt-Pressmind/constructs-js.git"
+    "url": "git://git@github.com:RGerhardt-Pressmind/constructs-js.git"
   },
   "main": "index.js",
   "scripts": {
