@@ -11,7 +11,7 @@
 - [Introduction](https://github.com/RGerhardt-Pressmind/constructs-js#introduction)
   - [Browser](https://github.com/RGerhardt-Pressmind/constructs-js#browser)
   - [NodeJS](https://github.com/RGerhardt-Pressmind/constructs-js#nodejs)
-  - [Angular 2+](https://github.com/RGerhardt-Pressmind/constructs-js#nodejs)
+  - [Angular 2+](https://github.com/RGerhardt-Pressmind/constructs-js#angular-2)
   - [locales available](https://github.com/RGerhardt-Pressmind/constructs-js#locales-available)
 - [Usage template](https://github.com/RGerhardt-Pressmind/constructs-js#usage-template)
   - [Example](https://github.com/RGerhardt-Pressmind/constructs-js#example)
