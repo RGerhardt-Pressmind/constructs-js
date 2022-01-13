@@ -11,6 +11,7 @@
 - [Introduction](https://github.com/RGerhardt-Pressmind/constructs-js#introduction)
   - [Browser](https://github.com/RGerhardt-Pressmind/constructs-js#browser)
   - [NodeJS](https://github.com/RGerhardt-Pressmind/constructs-js#nodejs)
+  - [Angular 2+](https://github.com/RGerhardt-Pressmind/constructs-js#nodejs)
   - [locales available](https://github.com/RGerhardt-Pressmind/constructs-js#locales-available)
 - [Usage template](https://github.com/RGerhardt-Pressmind/constructs-js#usage-template)
   - [Example](https://github.com/RGerhardt-Pressmind/constructs-js#example)
@@ -100,6 +101,41 @@ let construct      =   new Constructs('de'); // de = locale (fallback locale is 
 let first_name = constructs.ug.get('first_name');
 let sur_name   = constructs.ug.get('sur_name');
 let email      = constructs.ug.get('email');
+```
+
+### Angular 2+
+
+Install
+```
+npm install constructs-js --save
+```
+
+Usage
+
+Add the constructs.min.js in the angular.json at the scripts block
+```json
+{
+  "scripts": [
+    "node_modules/constructs-js/dist/constructs.min.js"
+  ]
+}
+```
+
+Test e.g. in the app.component.ts if the script is reachable:
+
+```typescript
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.scss']
+})
+export class AppComponent {
+  constructor() {
+    let constructs = window['constructs']('de');
+    
+    console.log('First name: '+constructs.ug.get('first_name'));
+  }
+}
 ```
 
 ### locales available
