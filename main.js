@@ -9,7 +9,7 @@ var app = http.createServer(function(req,res){
     }
     res.setHeader('Content-Type', 'application/json');
 
-    let construct   =   new Construct();
+    let construct   =   new Construct('ir');
 
     res.end(construct.generateUniqData(JSON.parse(fs.readFileSync(__dirname+'/example.json', 'utf8'))));
 });

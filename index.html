@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/default.min.css">
 
-    <script src="dist/constructs.min.js" type="text/javascript"></script>
+    <script src="dist/constructs.js" type="text/javascript"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"></script>
 </head>
 <body class="container">
@@ -20,29 +20,29 @@
 
 var constructs   =   new constructs();
 
-var address           =   constructs.ug.get('address');
-var building_number   =   constructs.ug.get('building_number');
-var cell_phone        =   constructs.ug.get('cell_phone');
-var city              =   constructs.ug.get('city');
-var company           =   constructs.ug.get('company');
-var country           =   constructs.ug.get('country');
-var email             =   constructs.ug.get('email');
-var first_name        =   constructs.ug.get('first_name');
-var gender            =   constructs.ug.get('gender');
-var image             =   constructs.ug.get('image');
-var image_animal      =   constructs.ug.get('image', {type: 'animal'});
-var image_city        =   constructs.ug.get('image', {type: 'city'});
-var image_human       =   constructs.ug.get('image', {type: 'human'});
-var image_nature      =   constructs.ug.get('image', {type: 'nature'});
-var image_technic     =   constructs.ug.get('image', {type: 'technic'});
-var loremIpsum        =   constructs.ug.get('loremIpsum', {words: 10});
-var name              =   constructs.ug.get('name');
-var phone             =   constructs.ug.get('phone');
-var postcode          =   constructs.ug.get('postcode');
-var state             =   constructs.ug.get('state');
-var street            =   constructs.ug.get('street');
-var sur_name          =   constructs.ug.get('sur_name');
-var title             =   constructs.ug.get('title');
+var address           =   constructs.address.getAddress();
+var building_number   =   constructs.address.getBuildingNumber();
+var cell_phone        =   constructs.phone.getCellPhoneNumber();
+var city              =   constructs.city.getCity();
+var company           =   constructs.company.getCompany();
+var country           =   constructs.country.getDefaultCountry();
+var email             =   constructs.email.getEmail();
+var first_name        =   constructs.name.getFirstName();
+var salutation        =   constructs.name.getSalutation();
+var image_avatar      =   constructs.image.getImage();
+var image_animal      =   constructs.image.getAnimalImage();
+var image_city        =   constructs.image.getCityImage();
+var image_human       =   constructs.image.getHumanImage();
+var image_nature      =   constructs.image.getNatureImage();
+var image_technic     =   constructs.image.getTechnicImage();
+var loremIpsum        =   constructs.loremIpsum.getWords({max: 10});
+var name              =   constructs.name.getName();
+var phone             =   constructs.phone.getPhoneNumber();
+var postcode          =   constructs.address.getPostcode();
+var state             =   constructs.address.getState();
+var street            =   constructs.address.getStreet();
+var sur_name          =   constructs.name.getSurName();
+var title             =   constructs.name.getTitle();
     </code></pre>
 
     <p>
@@ -54,7 +54,7 @@ var title             =   constructs.ug.get('title');
         <strong>country</strong>: <span id="country"></span><br>
         <strong>email</strong>: <span id="email"></span><br>
         <strong>first_name</strong>: <span id="first_name"></span><br>
-        <strong>gender</strong>: <span id="gender"></span><br><br>
+        <strong>salutation</strong>: <span id="salutation"></span><br><br>
         <strong>image</strong>: <br><img id="image_img" width="100"><br><span id="image"></span><br><br>
         <strong>image_animal</strong>: <br><img id="image_animal_img" width="100"><br><span id="image_animal"></span><br><br>
         <strong>image_city</strong>: <br><img id="image_city_img" width="100"><br><span id="image_city"></span><br><br>
@@ -72,42 +72,42 @@ var title             =   constructs.ug.get('title');
     </p>
 
     <script>
-        var constructs   =   new constructs();
+        var constructs   =   new constructs('ge');
 
-        document.getElementById('address').innerText = constructs.ug.get('address');
-        document.getElementById('first_name').innerText = constructs.ug.get('first_name');
-        document.getElementById('sur_name').innerText = constructs.ug.get('sur_name');
-        document.getElementById('name').innerText = constructs.ug.get('name');
-        document.getElementById('building_number').innerText = constructs.ug.get('building_number');
-        document.getElementById('cell_phone').innerText = constructs.ug.get('cell_phone');
-        document.getElementById('city').innerText = constructs.ug.get('city');
-        document.getElementById('company').innerText = constructs.ug.get('company');
-        document.getElementById('country').innerText = constructs.ug.get('country');
-        document.getElementById('email').innerText = constructs.ug.get('email');
-        document.getElementById('gender').innerText = constructs.ug.get('gender');
-        document.getElementById('loremIpsum').innerText = constructs.ug.get('loremIpsum', {words: 10});
-        document.getElementById('phone').innerText = constructs.ug.get('phone');
-        document.getElementById('postcode').innerText = constructs.ug.get('postcode');
-        document.getElementById('state').innerText = constructs.ug.get('state');
-        document.getElementById('street').innerText = constructs.ug.get('street');
-        document.getElementById('title').innerText = constructs.ug.get('title');
+        document.getElementById('address').innerText = constructs.address.getAddress();
+        document.getElementById('first_name').innerText = constructs.name.getFirstName();
+        document.getElementById('sur_name').innerText = constructs.name.getSurName();
+        document.getElementById('name').innerText = constructs.name.getName();
+        document.getElementById('building_number').innerText = constructs.address.getBuildingNumber();
+        document.getElementById('cell_phone').innerText = constructs.phone.getCellPhoneNumber();
+        document.getElementById('city').innerText = constructs.city.getCity();
+        document.getElementById('company').innerText = constructs.company.getCompany();
+        document.getElementById('country').innerText = constructs.country.getDefaultCountry();
+        document.getElementById('email').innerText = constructs.email.getEmail();
+        document.getElementById('salutation').innerText = constructs.name.getSalutation();
+        document.getElementById('loremIpsum').innerText = constructs.loremIpsum.getWords({max: 10});
+        document.getElementById('phone').innerText = constructs.phone.getPhoneNumber();
+        document.getElementById('postcode').innerText = constructs.address.getPostcode();
+        document.getElementById('state').innerText = constructs.address.getState();
+        document.getElementById('street').innerText = constructs.address.getStreet();
+        document.getElementById('title').innerText = constructs.name.getTitle();
 
-        document.getElementById('image').innerText = constructs.ug.get('image');
+        document.getElementById('image').innerText = constructs.image.getAvatarImage();
         document.getElementById('image_img').src = document.getElementById('image').innerText;
 
-        document.getElementById('image_nature').innerText = constructs.ug.get('image', {type: 'nature'});
+        document.getElementById('image_nature').innerText = constructs.image.getNatureImage();
         document.getElementById('image_nature_img').src = document.getElementById('image_nature').innerText;
 
-        document.getElementById('image_animal').innerText = constructs.ug.get('image', {type: 'animal'});
+        document.getElementById('image_animal').innerText = constructs.image.getAnimalImage();
         document.getElementById('image_animal_img').src = document.getElementById('image_animal').innerText;
 
-        document.getElementById('image_city').innerText = constructs.ug.get('image', {type: 'city'});
+        document.getElementById('image_city').innerText = constructs.image.getCityImage();
         document.getElementById('image_city_img').src = document.getElementById('image_city').innerText;
 
-        document.getElementById('image_human').innerText = constructs.ug.get('image', {type: 'human'});
+        document.getElementById('image_human').innerText = constructs.image.getHumanImage();
         document.getElementById('image_human_img').src = document.getElementById('image_human').innerText;
 
-        document.getElementById('image_technic').innerText = constructs.ug.get('image', {type: 'technic'});
+        document.getElementById('image_technic').innerText = constructs.image.getTechnicImage();
         document.getElementById('image_technic_img').src = document.getElementById('image_technic').innerText;
     </script>
 
@@ -129,11 +129,11 @@ var title             =   constructs.ug.get('title');
     <script>
         for(var i = 0; ++i <= 5;)
         {
-            var avatar      =   constructs.ug.get('image', {type: 'avatar'});
-            var name        =   constructs.ug.get('name');
-            var birthday    =   constructs.ug.date('2020-01-01');
-            var age         =   constructs.ug.diffYearNow(birthday);
-            var address     =   constructs.ug.get('address');
+            var avatar      =   constructs.image.getAvatarImage();
+            var name        =   constructs.name.getName();
+            var birthday    =   constructs.date('2020-01-01');
+            var age         =   constructs.diffYearNow(birthday);
+            var address     =   constructs.address.getAddress();
 
             // Append to table
             var tableRef    =   document.getElementsByTagName('tbody')[0];
@@ -162,15 +162,15 @@ let template = {
     structure: [
         {
             name: "id",
-            mask: "[ug:id]"
+            mask: "[id]"
         },
         {
             name: "first_name",
-            mask: "[ug:first_name]"
+            mask: "[name:getFirstName]"
         },
         {
             name: "sur_name",
-            mask: "[ug:sur_name]"
+            mask: "[name:getSurName]"
         },
         {
             name: "name",
@@ -178,15 +178,15 @@ let template = {
         },
         {
             name: "birthday",
-            mask: "[ug:date(1990-01-01, 1970-01-01)]" // Generate date from 01.01.1970 and 01.01.1990
+            mask: "[date(1990-01-01, 1970-01-01)]" // Generate date from 01.01.1970 and 01.01.1990
         },
         {
             name: "age",
-            mask: "[ug:diffYearNow({birthday})]" // Returns the difference in years from the field content {"name": "birthday"} returns
+            mask: "[diffYearNow({birthday})]" // Returns the difference in years from the field content {"name": "birthday"} returns
         },
         {
             name: "created_date",
-            mask: "[ug:datetime]"
+            mask: "[datetime]"
         }
     ],
     output: {
@@ -209,15 +209,15 @@ console.log(generatedData);
             structure: [
                 {
                     name: "id",
-                    mask: "[ug:id]"
+                    mask: "[id]"
                 },
                 {
                     name: "first_name",
-                    mask: "[ug:first_name]"
+                    mask: "[name:getFirstName]"
                 },
                 {
                     name: "sur_name",
-                    mask: "[ug:sur_name]"
+                    mask: "[name:getSurName]"
                 },
                 {
                     name: "name",
@@ -225,15 +225,15 @@ console.log(generatedData);
                 },
                 {
                     name: "birthday",
-                    mask: "[ug:date(1990-01-01, 1970-01-01)]"
+                    mask: "[date(1990-01-01, 1970-01-01)]"
                 },
                 {
                     name: "age",
-                    mask: "[ug:diffYearNow({birthday})]"
+                    mask: "[diffYearNow({birthday})]"
                 },
                 {
                     name: "created_date",
-                    mask: "[ug:datetime]"
+                    mask: "[datetime]"
                 }
             ],
             output: {

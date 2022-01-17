@@ -3,56 +3,56 @@
   "structure": [
     {
       "name": "id",
-      "mask": "[ug:id]"
+      "mask": "[id]"
     },
     {
       "name": "name",
-      "mask": "[ug:name]"
+      "mask": "[name:getName]"
     },
     {
       "name": "birthday",
-      "mask": "[ug:date(1990-01-01)]"
+      "mask": "[date(1990-01-01)]"
     },
     {
       "name": "email",
-      "mask": "[ug:email]"
+      "mask": "[email:getEmail]"
     },
     {
       "name": "age",
-      "mask": "[ug:diffYearNow({birthday})]"
+      "mask": "[diffYearNow({birthday})]"
     },
     {
       "name": "address",
-      "mask": "[ug:address]"
+      "mask": "[address:getAddress]"
     },
     {
       "name": "created_date",
-      "mask": "[ug:datetime]"
+      "mask": "[datetime]"
     },
     {
       "name": "avatar",
-      "mask": "[ug:image(type:avatar)]"
+      "mask": "[image:getImage(type:avatar)]"
     },
     {
       "name": "company",
-      "mask": "[ug:company]"
+      "mask": "[company:getCompany]"
     },
     {
       "name": "cell_phone",
-      "mask": "[ug:cell_phone]"
+      "mask": "[phone:getCellPhoneNumber]"
     },
     {
       "name": "phone_number",
-      "mask": "[ug:phone]"
+      "mask": "[phone:getPhoneNumber]"
     },
     {
       "name": "lorem_ipsum",
-      "mask": "[ug:loremIpsum(words:5)]"
+      "mask": "[loremIpsum:getWords(words:5)]"
     }
   ],
   "output": {
     "result": "output",
     "type": "json",
-    "limit": 1000
+    "limit": 100
   }
 }

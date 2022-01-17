@@ -1,3 +1,4 @@
 module['exports'] = {
-    items: ['{sur_name:default} {company:suffix}', '{sur_name:default}-{sur_name:default}', '{sur_name:default}, {sur_name:default} and {sur_name:default}']
+    items: ['{name:getSurName} {company:getSuffix}', '{name:getSurName}-{name:getSurName}', '{name:getSurName}, {name:getSurName} and {name:getSurName}'],
+    suffix: ['Sole Proprietorship', 'Partnership', 'Corporation', 'Pty Ltd']
 };

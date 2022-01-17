@@ -1,7 +1,5 @@
 module['exports'] = {
-    items: ['{first_name:default}@{email:suffix}'],
+    items: ['{name:getFirstName}@{email:getSuffix}'],
 
-    after: function(item){
-        return item.charAt(0).toLowerCase()+item.slice(1);
-    }
+    suffix: ['gmail.com', 'yahoo.com', 'web.de', 'freemail.de', 'ok.de', 'gmx.net', 'freenet.de']
 }

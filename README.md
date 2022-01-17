@@ -1,72 +1,107 @@
 # constructs.js - creates extremely large amount of random data for browser and node.js
 
-<img src="https://d22kzm8dnmp26q.cloudfront.net/logo_transparent_background.png" width="250">
-
 ## Demo
 [https://rgerhardt-pressmind.github.io/constructs-js](https://rgerhardt-pressmind.github.io/constructs-js)
 
-![locales](https://img.shields.io/badge/locales%20available-4-blue)
+![locales](https://img.shields.io/badge/locales%20available-14-blue)
 
-## Table of content
-- [Introduction](https://github.com/RGerhardt-Pressmind/constructs-js#introduction)
-  - [Browser](https://github.com/RGerhardt-Pressmind/constructs-js#browser)
-  - [NodeJS](https://github.com/RGerhardt-Pressmind/constructs-js#nodejs)
-  - [Angular 2+](https://github.com/RGerhardt-Pressmind/constructs-js#angular-2)
-  - [locales available](https://github.com/RGerhardt-Pressmind/constructs-js#locales-available)
-- [Usage template](https://github.com/RGerhardt-Pressmind/constructs-js#usage-template)
-  - [Example](https://github.com/RGerhardt-Pressmind/constructs-js#example)
-- [API](https://github.com/RGerhardt-Pressmind/constructs-js#api)
-  - [Standalone](https://github.com/RGerhardt-Pressmind/constructs-js#standalone)
-    - [address](https://github.com/RGerhardt-Pressmind/constructs-js#address)
-    - [building_number](https://github.com/RGerhardt-Pressmind/constructs-js#building_number)
-    - [cell_phone](https://github.com/RGerhardt-Pressmind/constructs-js#cell_phone)
-    - [city](https://github.com/RGerhardt-Pressmind/constructs-js#city)
-    - [company](https://github.com/RGerhardt-Pressmind/constructs-js#company)
-    - [country](https://github.com/RGerhardt-Pressmind/constructs-js#country)
-    - [email](https://github.com/RGerhardt-Pressmind/constructs-js#email)
-    - [first_name](https://github.com/RGerhardt-Pressmind/constructs-js#first_name)
-    - [gender](https://github.com/RGerhardt-Pressmind/constructs-js#gender)
-    - [image](https://github.com/RGerhardt-Pressmind/constructs-js#image)
-      - [animal example](https://github.com/RGerhardt-Pressmind/constructs-js#animal)
-      - [avatar example](https://github.com/RGerhardt-Pressmind/constructs-js#avatar)
-      - [city example](https://github.com/RGerhardt-Pressmind/constructs-js#city)
-      - [human example](https://github.com/RGerhardt-Pressmind/constructs-js#human)
-      - [nature example](https://github.com/RGerhardt-Pressmind/constructs-js#nature)
-      - [technic example](https://github.com/RGerhardt-Pressmind/constructs-js#technic)
-    - [loremIpsum](https://github.com/RGerhardt-Pressmind/constructs-js#loremipsum)
-    - [name](https://github.com/RGerhardt-Pressmind/constructs-js#name)
-    - [phone](https://github.com/RGerhardt-Pressmind/constructs-js#phone)
-    - [postcode](https://github.com/RGerhardt-Pressmind/constructs-js#postcode)
-    - [state](https://github.com/RGerhardt-Pressmind/constructs-js#state)
-    - [street](https://github.com/RGerhardt-Pressmind/constructs-js#street)
-    - [sur_name](https://github.com/RGerhardt-Pressmind/constructs-js#sur_name)
-    - [title](https://github.com/RGerhardt-Pressmind/constructs-js#title)
-  - [Template](https://github.com/RGerhardt-Pressmind/constructs-js#template)
-  - [Template masks](https://github.com/RGerhardt-Pressmind/constructs-js#template-masks)
-  - [Module functions](https://github.com/RGerhardt-Pressmind/constructs-js#module-functions)
-    - [\[ug:id\]](https://github.com/RGerhardt-Pressmind/constructs-js#ugid)
-    - [\[ug:date\]](https://github.com/RGerhardt-Pressmind/constructs-js#ugdate)
-    - [\[ug:datetime\]](https://github.com/RGerhardt-Pressmind/constructs-js#ugdatetime)
-    - [\[ug:diffYearNow\]](https://github.com/RGerhardt-Pressmind/constructs-js#ugdiffyearnow)
-    - [\[ug:address\]](https://github.com/RGerhardt-Pressmind/constructs-js#ugaddress)
-    - [\[ug:building_number\]](https://github.com/RGerhardt-Pressmind/constructs-js#ugbuilding_number)
-    - [\[ug:cell_phone\]](https://github.com/RGerhardt-Pressmind/constructs-js#ugcell_phone)
-    - [\[ug:city\]](https://github.com/RGerhardt-Pressmind/constructs-js#ugcity)
-    - [\[ug:company\]](https://github.com/RGerhardt-Pressmind/constructs-js#ugcompany)
-    - [\[ug:country\]](https://github.com/RGerhardt-Pressmind/constructs-js#ugcountry)
-    - [\[ug:email\]](https://github.com/RGerhardt-Pressmind/constructs-js#ugemail)
-    - [\[ug:first_name\]](https://github.com/RGerhardt-Pressmind/constructs-js#ugfirst_name)
-    - [\[ug:gender\]](https://github.com/RGerhardt-Pressmind/constructs-js#uggender)
-    - [\[ug:image\]](https://github.com/RGerhardt-Pressmind/constructs-js#ugimage)
-    - [\[ug:loremIpsum\]](https://github.com/RGerhardt-Pressmind/constructs-js#ugloremipsum)
-    - [\[ug:name\]](https://github.com/RGerhardt-Pressmind/constructs-js#ugname)
-    - [\[ug:phone\]](https://github.com/RGerhardt-Pressmind/constructs-js#ugphone)
-    - [\[ug:postcode\]](https://github.com/RGerhardt-Pressmind/constructs-js#ugpostcode)
-    - [\[ug:state\]](https://github.com/RGerhardt-Pressmind/constructs-js#ugstate)
-    - [\[ug:street\]](https://github.com/RGerhardt-Pressmind/constructs-js#ugstreet)
-    - [\[ug:sur_name\]](https://github.com/RGerhardt-Pressmind/constructs-js#ugsur_name)
-    - [\[ug:title\]](https://github.com/RGerhardt-Pressmind/constructs-js#ugtitle)
+## Table of contents
 
+- [Demo](#demo)
+- [Introduction](#introduction)
+  * [Browser](#browser)
+  * [NodeJS](#nodejs)
+  * [Angular 2+](#angular-2-)
+  * [locales available](#locales-available)
+- [Usage template](#usage-template)
+  * [Example](#example)
+  * [Output](#output)
+- [API](#api)
+  * [Standalone](#standalone)
+    + [address](#address)
+      - [getAddress](#getaddress)
+      - [getStreet](#getstreet)
+      - [getBuildingNumber](#getbuildingnumber)
+      - [getPostcode](#getpostcode)
+      - [getState](#getstate)
+    + [city](#city)
+      - [getCity](#getcity)
+      - [getPrefix](#getprefix)
+      - [getSuffix](#getsuffix)
+    + [company](#company)
+      - [getCompany](#getcompany)
+      - [getSuffix](#getsuffix-1)
+    + [country](#country)
+      - [getCountry](#getcountry)
+      - [getDefaultCountry](#getdefaultcountry)
+    + [email](#email)
+      - [getEmail](#getemail)
+      - [getSuffix](#getsuffix-2)
+    + [image](#image)
+      - [getImage](#getimage)
+        * [Animal](#animal)
+        * [Avatar](#avatar)
+        * [City](#city)
+        * [Human](#human)
+        * [Nature](#nature)
+        * [Technic](#technic)
+    + [loremIpsum](#loremipsum)
+      - [getWords](#getwords)
+    + [name](#name)
+      - [getName](#getname)
+      - [getFirstName](#getfirstname)
+      - [getSurName](#getsurname)
+      - [getSalutation](#getsalutation)
+      - [getTitle](#gettitle)
+    + [phone](#phone)
+      - [getCellPhoneNumber](#getcellphonenumber)
+      - [getPhoneNumber](#getphonenumber)
+  * [Template](#template)
+  * [Template masks](#template-masks)
+  * [Module functions](#module-functions)
+    + [Global modules](#global-modules)
+      - [[id]](#-id-)
+      - [[date]](#-date-)
+      - [[datetime]](#-datetime-)
+      - [[diffYearNow]](#-diffyearnow-)
+    + [address](#address-1)
+      - [[address:getAddress]](#-address-getaddress-)
+      - [[address:getStreet]](#-address-getstreet-)
+      - [[address:getBuildingNumber]](#-address-getbuildingnumber-)
+      - [[address:getPostcode]](#-address-getpostcode-)
+      - [[address:getState]](#-address-getstate-)
+    + [city](#city-1)
+      - [[city:getCity]](#-city-getcity-)
+      - [[city:getPrefix]](#-city-getprefix-)
+      - [[city:getSuffix]](#-city-getsuffix-)
+    + [company](#company-1)
+      - [[company:getCompany]](#-company-getcompany-)
+      - [[company:getSuffix]](#-company-getsuffix-)
+    + [country](#country-1)
+      - [[country:getCountry]](#-country-getcountry-)
+      - [[country:getDefaultCountry]](#-country-getdefaultcountry-)
+    + [email](#email-1)
+      - [[email:getEmail]](#-email-getemail-)
+      - [[email:getSuffix]](#-email-getsuffix-)
+    + [[image]](#-image-)
+      - [[image:getImage]](#-image-getimage-)
+      - [[image:getAvatarImage]](#-image-getavatarimage-)
+      - [[image:getAnimalImage]](#-image-getanimalimage-)
+      - [[image:getCityImage]](#-image-getcityimage-)
+      - [[image:getHumanImage]](#-image-gethumanimage-)
+      - [[image:getNatureImage]](#-image-getnatureimage-)
+      - [[image:getTechnicImage]](#-image-gettechnicimage-)
+    + [loremIpsum](#loremipsum-1)
+      - [[loremIpsum:getWords]](#-loremipsum-getwords-)
+    + [name](#name-1)
+      - [[name:getName]](#-name-getname-)
+      - [[name:getFirstName]](#-name-getfirstname-)
+      - [[name:getSurName]](#-name-getsurname-)
+      - [[name:getSalutation]](#-name-getsalutation-)
+      - [[name:getTitle]](#-name-gettitle-)
+    + [phone](#phone-1)
+      - [[phone:getPhoneNumber]](#-phone-getphonenumber-)
+      - [[phone:getCellPhoneNumber]](#-phone-getcellphonenumber-)
 
 ## Introduction
 
@@ -79,9 +114,9 @@ Download [latest stable](https://github.com/RGerhardt-Pressmind/constructs-js/re
 <script>
     var constructs = new constructs("de"); // de = locale (fallback locale is "de")
 
-    let uniqFirstName = constructs.ug.get('first_name'); // Maik
-    let uniqSurName   = constructs.ug.get('sur_name'); // Raschel
-    let uniqEmail     = constructs.ug.get('email'); // max@gmail.com
+    let uniqFirstName = constructs.name.getFirstName(); // Maik
+    let uniqSurName   = constructs.name.getSurName(); // Raschel
+    let uniqEmail     = constructs.email.getEmail(); // max@gmail.com
 </script>
 ```
 
@@ -98,9 +133,9 @@ Usage
 const Constructs    =   require('./construct');
 let construct      =   new Constructs('de'); // de = locale (fallback locale is "de")
 
-let first_name = constructs.ug.get('first_name');
-let sur_name   = constructs.ug.get('sur_name');
-let email      = constructs.ug.get('email');
+let first_name = constructs.name.getFirstName();
+let sur_name   = constructs.name.getSurName();
+let email      = constructs.email.getEmail();
 ```
 
 ### Angular 2+
@@ -133,7 +168,7 @@ export class AppComponent {
   constructor() {
     let constructs = window['constructs']('de');
     
-    console.log('First name: '+constructs.ug.get('first_name'));
+    console.log('First name: '+constructs.name.getFirstName());
   }
 }
 ```
@@ -141,8 +176,18 @@ export class AppComponent {
 ### locales available
 - **af_ZA** _(South Africa)_
 - **ar** _(Argentina)_
+- **az** _(Azerbaijan)_
+- **cz** _(Czech Republic)_
 - **de** _(Germany - **Fallback locale**)_
+- **de_AT** _(Austria)_
+- **de_CH** _(Switzerland)_
+- **en** _(United States of America)_
 - **en_GB** _(United Kingdom)_
+- **es** _(Spain)_
+- **fr** _(France)_
+- **ge** _(Georgia)_
+- **gr** _(Greece)_
+- **ir** _(Iran)_
 
 ## Usage template
 
@@ -155,15 +200,15 @@ let template = {
     structure: [
         {
             name: "id",
-            mask: "[ug:id]"
+            mask: "[id]"
         },
         {
             name: "first_name",
-            mask: "[ug:first_name]"
+            mask: "[name:getFirstName]"
         },
         {
             name: "sur_name",
-            mask: "[ug:sur_name]"
+            mask: "[name:getSurName]"
         },
         {
             name: "name",
@@ -171,15 +216,15 @@ let template = {
         },
         {
             name: "birthday",
-            mask: "[ug:date(1990-01-01, 1970-01-01)]" // Generate date from 01.01.1970 and 01.01.1990
+            mask: "[date(1990-01-01, 1970-01-01)]" // Generate date from 01.01.1970 and 01.01.1990
         },
         {
             name: "age",
-            mask: "[ug:diffYearNow({birthday})]" // Returns the difference in years from the field content {"name": "birthday"} returns
+            mask: "[diffYearNow({birthday})]" // Returns the difference in years from the field content {"name": "birthday"} returns
         },
         {
             name: "created_date",
-            mask: "[ug:datetime]"
+            mask: "[datetime]"
         }
     ],
     output: {
@@ -251,9 +296,11 @@ console.log(generatedData);
 ### Standalone
 
 #### address
+
+##### getAddress
 Generate random address. The structure of the address depends on the respective locale.
 ```javascript
-let address = constructs.ug.get('address');
+let address = constructs.address.getAddress();
 ```
 ```
 Am Neuenhof 53a, Baryllastadt 82559 Deutschland
@@ -261,10 +308,21 @@ Am Nonnenbruch 716, Nord Tillmannscheid 97817 Deutschland
 Karlstr. 42b, Süd Emrescheid 07554 Deutschland
 ```
 
-#### building_number
+##### getStreet
+Returns a random street based on the locale.
+```javascript
+let street      = constructs.address.getStreet();
+```
+```
+Friedrich-List-Str.
+Am Knechtsgraben
+Montanusstr.
+```
+
+##### getBuildingNumber
 Generates a building number based on the defined scheme in locale.
 ```javascript
-let building_number = constructs.ug.get('building_number');
+let building_number = constructs.address.getBuildingNumber();
 ```
 ```
 244
@@ -272,20 +330,34 @@ let building_number = constructs.ug.get('building_number');
 520a
 ```
 
-#### cell_phone
-Creates a random cell phone number based on the scheme in locale.
+##### getPostcode
+Returns a random zip code based on the locale.
 ```javascript
-let cell_phone = constructs.ug.get('cell_phone');
+let postcode      = constructs.address.getPostcode();
 ```
 ```
-+49-152-1664339
-+49-1739-9267441
+03884
+57392
+82411
+```
+
+##### getState
+Returns a random state based on the locale.
+```javascript
+let state      = constructs.address.getState();
+```
+```
+Thüringen
+Bremen
+Niedersachsen
 ```
 
 #### city
+
+##### getCity
 Generates a fictitious city name based on the first name and last name list from the locales.
 ```javascript
-let city = constructs.ug.get('city');
+let city = constructs.city.getCity();
 ```
 ```
 Jankescheid
@@ -293,10 +365,34 @@ Davinburg
 Gregerdorf
 ```
 
+##### getPrefix
+Returns a random prefix from the locale.
+```javascript
+let city_prefix = constructs.city.getPrefix();
+```
+```
+Nord
+Ost
+West
+```
+
+##### getSuffix
+Returns a random suffix from the locale.
+```javascript
+let city_suffix = constructs.city.getSuffix();
+```
+```
+stadt
+dorf
+land
+```
+
 #### company
+
+##### getCompany
 Generates a fictitious company name based on the first name and last name list from locales.
 ```javascript
-let company = constructs.ug.get('company');
+let company = constructs.company.getCompany();
 ```
 ```
 Loogen GmbH
@@ -304,81 +400,96 @@ Wartenberg, Helm und Többen
 Noack GmbH & Co KG
 ```
 
+##### getSuffix
+Returns a random prefix from the locale.
+```javascript
+let company_suffix = constructs.company.getSuffix();
+```
+```
+GmbH
+GbR
+AG
+```
+
 #### country
+
+##### getCountry
 Returns a random country which is stored in locale
 ```javascript
-let country = constructs.ug.get('country');
+let country = constructs.country.getCountry();
+```
+```
+Italien
+```
+
+##### getDefaultCountry
+Returns the default country
+```javascript
+let country_default = constructs.country.getDefaultCountry();
 ```
 ```
 Deutschland
 ```
 
 #### email
+
+##### getEmail
 Returns a random email address based on a random last name from the locale and a random defined domain.
 ```javascript
-let email = constructs.ug.get('email');
+let email = constructs.email.getEmail();
 ```
 ```
-Micha@gmail.com
-Frenke@yahoo.com
+micha@gmail.com
+frenke@yahoo.com
 ```
 
-#### first_name
-Returns a random first name from the list of locales.
+##### getSuffix
+Returns a random suffix from the locale.
 ```javascript
-let first_name = constructs.ug.get('first_name');
+let email_suffix = constructs.email.getSuffix();
 ```
 ```
-Maxel
-Frank
-Ben
+@gmail.com
+@yahoo.com
 ```
-
-#### gender
-Returns a random salutation based on the locale. 
-```javascript
-let gender = constructs.ug.get('gender');
-```
-```
-Herr
-Frau
-Diverses
-```
-
 #### image
+
+##### getImage
 Returns a random image based on the type in the local. By default the type "avatar" is set.  The images have a maximum size of 500x500 pixels.
 ```javascript
-let animal  = constructs.ug.get('image', {type: 'animal'});
-let avatar  = constructs.ug.get('image');
-let city    = constructs.ug.get('image', {type: 'city'});
-let human   = constructs.ug.get('image', {type: 'human'});
-let nature  = constructs.ug.get('image', {type: 'nature'});
-let technic = constructs.ug.get('image', {type: 'technic'});
+let animal  = constructs.image.getAnimalImage(); // or .image.getImage({type: 'animal'})
+let avatar  = constructs.image.getAvatarImage(); // or .image.getImage({type: 'avatar'})
+let city    = constructs.image.getCityImage(); // or .image.getImage({type: 'city'})
+let human   = constructs.image.getHumanImage(); // or .image.getImage({type: 'human'})
+let nature  = constructs.image.getNatureImage(); // or .image.getImage({type: 'nature'})
+let technic = constructs.image.getTechnicImage(); // or .image.getImage({type: 'technic'})
 ```
 
-##### Animal
+###### Animal
 <img width="200" src="https://d22kzm8dnmp26q.cloudfront.net/animal/15.jpg">
 
-##### Avatar
+###### Avatar
 <img width="200" src="https://d22kzm8dnmp26q.cloudfront.net/avatar/33.jpg">
 
-##### City
+###### City
 <img width="200" src="https://d22kzm8dnmp26q.cloudfront.net/city/17.jpg">
 
-##### Human
+###### Human
 <img width="200" src="https://d22kzm8dnmp26q.cloudfront.net/human/5.jpg">
 
-##### Nature
+###### Nature
 <img width="200" src="https://d22kzm8dnmp26q.cloudfront.net/nature/32.jpg">
 
-##### Technic
+###### Technic
 <img width="200" src="https://d22kzm8dnmp26q.cloudfront.net/technic/1.jpg">
 
 #### loremIpsum
+
+##### getWords
 Returns a random sentence based on the words from the "Lorem ipsum" text. The number of words can be limited/extended by the "words" parameter.
 ```javascript
-let loremIpsum      = constructs.ug.get('loremIpsum'); // return default 60 words
-let loremIpsum10    = constructs.ug.get('loremIpsum', {words: 10}); // return 10 words
+let loremIpsum      = constructs.loremIpsum.getWords(); // return default 60 words
+let loremIpsum10    = constructs.loremIpsum.getWords({max: 10}); // return 10 words
 ```
 ```
 60 words:
@@ -387,11 +498,12 @@ Amet vero ullamcorper sea lorem dolor clita voluptua accusam dolores justo labor
 10 words:
 Sadipscing elitr aliquam est et accusam sadipscing assum eum molestie.
 ```
-
 #### name
+
+##### getName
 Returns a random name based on the first name and last name list of the locale. Titles (doctor or professor) can also precede the names. 
 ```javascript
-let name      = constructs.ug.get('name');
+let name      = constructs.name.getName();
 ```
 ```
 Enes Kette
@@ -399,55 +511,21 @@ Frau Prof. Jolie Polifka
 Dr. Vito Kempter
 ```
 
-#### phone
-Returns a randomly generated phone number based on the local scheme.
+##### getFirstName
+Returns a random first name from the list of locales.
 ```javascript
-let phone      = constructs.ug.get('phone');
+let first_name = constructs.name.getFirstName();
 ```
 ```
-(0183) 837993227
-(01294) 4479364
-+49-174-9347731
-+49-1834-99411402
+Maxel
+Frank
+Ben
 ```
 
-#### postcode
-Returns a random zip code based on the locale.
-```javascript
-let postcode      = constructs.ug.get('postcode');
-```
-```
-03884
-57392
-82411
-```
-
-#### state
-Returns a random state based on the locale.
-```javascript
-let state      = constructs.ug.get('state');
-```
-```
-Thüringen
-Bremen
-Niedersachsen
-```
-
-#### street
-Returns a random street based on the locale.
-```javascript
-let street      = constructs.ug.get('street');
-```
-```
-Friedrich-List-Str.
-Am Knechtsgraben
-Montanusstr.
-```
-
-#### sur_name
+##### getSurName
 Returns a random surname based on the locale.
 ```javascript
-let sur_name      = constructs.ug.get('sur_name');
+let sur_name      = constructs.name.getSurName();
 ```
 ```
 Bremser
@@ -455,14 +533,48 @@ Ritosek
 Lott
 ```
 
-#### title
+##### getSalutation
+Returns a random salutation based on the locale. 
+```javascript
+let gender = constructs.name.getSalutation();
+```
+```
+Herr
+Frau
+Diverses
+```
+
+##### getTitle
 Returns a random title based on the locale.
 ```javascript
-let title      = constructs.ug.get('title');
+let title      = constructs.name.getTitle();
 ```
 ```
 Dr.
 Prof.
+```
+#### phone
+
+##### getCellPhoneNumber
+Creates a random cell phone number based on the scheme in locale.
+```javascript
+let cell_phone = constructs.phone.getCellPhoneNumber();
+```
+```
++49-152-1664339
++49-1739-9267441
+```
+
+##### getPhoneNumber
+Returns a randomly generated phone number based on the local scheme.
+```javascript
+let phone      = constructs.phone.getPhoneNumber();
+```
+```
+(0183) 837993227
+(01294) 4479364
++49-174-9347731
++49-1834-99411402
 ```
 
 ### Template
@@ -474,7 +586,7 @@ The template scheme is structured as follows and must be maintained.
     structure: [
         {
             name: "id", // Field name
-            mask: "[ug:id]" // Mask
+            mask: "[id]" // Mask
         }
     ],
     output: {
@@ -498,7 +610,7 @@ Function calls can also include parameters that can be processed further.
 
 Several [module:function] can also be listed in the masks.
 ```
-Prof. Dr. [ug:first_name] [ug:surname]
+Prof. Dr. [name:getFirstName] [name:getSurName]
 ```
 So different masks can be combined in the input mask and normal text can be used.
 
@@ -507,146 +619,232 @@ For example, one has built a structure that looks like this:
 ```
 {
     "name": "birthday",
-    "mask": "[ug:date]"
+    "mask": "[date]"
 },
 {
     "name": "age"
-    "mask": "[ug:diffYearNow({birthday})]"
+    "mask": "[diffYearNow({birthday})]"
 }
 ```
 Then you can see that in the mask at the field **age** the field content **{birthday}** is accessed. It doesn't matter where the field is defined in the structure.
 
 ### Module functions
 
-#### [ug:id]
+#### Global modules
+
+##### [id]
 Returns a random generated number which can be further restricted with the parameters **min** and **max**. 
 ```
-[ug:id(min = 1, max = 1000000)]
+[id(min = 1, max = 1000000)]
 ```
 
-#### [ug:date]
+##### [date]
 Returns a random generated date which can be further restricted with the parameters **min** (schema: 1970-01-01) and **max** (schema: 1970-01-01). 
 ```
-[ug:date(min = null, max = null)]
+[date(min = null, max = null)]
 ```
 
-#### [ug:datetime]
+##### [datetime]
 Returns a random generated datetime which can be further restricted with the parameters **min** (schema: 1970-01-01) and **max** (schema: 1970-01-01). 
 ```
-[ug:datetime(min = null, max = null)]
+[datetime(min = null, max = null)]
 ```
 
-#### [ug:diffYearNow]
+##### [diffYearNow]
 Calculates the year which lies between the passed date and today's date.
 (schema: 1970-01-01 or 1970-01-01 00:00:00)
 ```
-[ug:diffYearNow(date)]
+[diffYearNow(date)]
 ```
 
-#### [ug:address]
+#### address
+
+##### [address:getAddress]
 Returns an address based on the locale.
 ```
-[ug:address]
+[address:getAddress]
 ```
 
-#### [ug:building_number]
+##### [address:getStreet]
+Returns a street based on the locale.
+```
+[address:getStreet]
+```
+
+##### [address:getBuildingNumber]
 Returns a building number based on the locales
 ```
-[ug:building_number]
+[address:getBuildingNumber]
 ```
 
-#### [ug:cell_phone]
-Returns a cell phone number based on the locale
+##### [address:getPostcode]
+Returns a post code based on the locales
 ```
-[ug:cell_phone]
-```
-
-#### [ug:city]
-Returns a city based on the locale
-```
-[ug:city]
+[address:getPostcode]
 ```
 
-#### [ug:company]
-Returns a company based on the locale
+##### [address:getState]
+Returns a state based on the locales
 ```
-[ug:company]
-```
-
-#### [ug:country]
-Returns a country based on the locale
-```
-[ug:country]
+[address:getState]
 ```
 
-#### [ug:email]
-Returns a email based on the locale
+#### city
+
+##### [city:getCity]
+Returns a city based on the locales
 ```
-[ug:email]
+[city:getCity]
 ```
 
-#### [ug:first_name]
-Returns a firstname based on the locale
+##### [city:getPrefix]
+Returns a prefix based on the locales
 ```
-[ug:first_name]
-```
-
-#### [ug:gender]
-Returns a gender based on the locale
-```
-[ug:gender]
+[city:getPrefix]
 ```
 
-#### [ug:image]
+##### [city:getSuffix]
+Returns a suffix based on the locales
+```
+[city:getSuffix]
+```
+
+#### company
+
+##### [company:getCompany]
+Returns a company based on the locales
+```
+[company:getCompany]
+```
+
+##### [company:getSuffix]
+Returns a suffix based on the locales
+```
+[company:getSuffix]
+```
+
+#### country
+
+##### [country:getCountry]
+Returns a country based on the locales
+```
+[country:getCountry]
+```
+
+##### [country:getDefaultCountry]
+Returns the default country of the locale
+```
+[country:getDefaultCountry]
+```
+
+#### email
+
+##### [email:getEmail]
+Returns a email based on the locales
+```
+[email:getEmail]
+```
+
+##### [email:getSuffix]
+Returns a suffix based on the locales
+```
+[email:getSuffix]
+```
+
+#### [image]
+
+##### [image:getImage]
 Returns a image based on the locale. The type parameter defines from which image pool a random image should come back. Existing image pools: animal, avatar(default), city, human, nature and technic
 ```
-[ug:image(type: null)]
+[image:getImage(type: null)]
 ```
 
-#### [ug:loremIpsum]
-Returns a random Lorem ipsum text based on the locale. The parameter "words" can be used to specify the length of the returned sentence. By default the length is 60 words.
+##### [image:getAvatarImage]
+Returns a avatar image based on the locales
 ```
-[ug:loremIpsum(words: null)]
-```
-
-#### [ug:name]
-Returns a random name based on the locale of the first name and last name list. 
-```
-[ug:name]
+[image:getAvatarImage]
 ```
 
-#### [ug:phone]
-Returns a random phone number based on the locale. 
+##### [image:getAnimalImage]
+Returns a animal image based on the locales
 ```
-[ug:phone]
-```
-
-#### [ug:postcode]
-Returns a random postcode based on the locale. 
-```
-[ug:postcode]
+[image:getAnimalImage]
 ```
 
-#### [ug:state]
-Returns a random state based on the locale. 
+##### [image:getCityImage]
+Returns a city image based on the locales
 ```
-[ug:state]
-```
-
-#### [ug:street]
-Returns a random street based on the locale. 
-```
-[ug:street]
+[image:getCityImage]
 ```
 
-#### [ug:sur_name]
-Returns a random surname based on the locale. 
+##### [image:getHumanImage]
+Returns a human image based on the locales
 ```
-[ug:sur_name]
+[image:getHumanImage]
 ```
 
-#### [ug:title]
-Returns a random title based on the locale. 
+##### [image:getNatureImage]
+Returns a nature image based on the locales
 ```
-[ug:title]
+[image:getNatureImage]
+```
+
+##### [image:getTechnicImage]
+Returns a technic image based on the locales
+```
+[image:getTechnicImage]
+```
+
+#### loremIpsum
+
+##### [loremIpsum:getWords]
+Returns a random Lorem ipsum text based on the locale. The parameter "max" can be used to specify the length of the returned sentence. By default the length is 60 words.
+```
+[loremIpsum:getWords(max: null)]
+```
+
+#### name
+
+##### [name:getName]
+Returns a name based on the locales
+```
+[name:getName]
+```
+
+##### [name:getFirstName]
+Returns a first name based on the locales
+```
+[name:getFirstName]
+```
+
+##### [name:getSurName]
+Returns a sur name based on the locales
+```
+[name:getSurName]
+```
+
+##### [name:getSalutation]
+Returns a salutation based on the locales
+```
+[name:getSalutation]
+```
+
+##### [name:getTitle]
+Returns a title based on the locales
+```
+[name:getTitle]
+```
+
+#### phone
+
+##### [phone:getPhoneNumber]
+Returns a phone number based on the locales
+```
+[name:getPhoneNumber]
+```
+
+##### [phone:getCellPhoneNumber]
+Returns a cell phone number based on the locales
+```
+[name:getCellPhoneNumber]
 ```

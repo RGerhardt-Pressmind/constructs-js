@@ -1,3 +1,4 @@
 module['exports']  =   {
-    items: ['South Africa']
+    items: ['South Africa'],
+    default: ['South Africa']
 };
