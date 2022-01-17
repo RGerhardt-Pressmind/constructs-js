@@ -3,7 +3,8 @@
 ## Demo
 [https://rgerhardt-pressmind.github.io/constructs-js](https://rgerhardt-pressmind.github.io/constructs-js)
 
-![locales](https://img.shields.io/badge/locales%20available-14-blue)
+[![npm version](https://badge.fury.io/js/constructs-js.svg)](https://www.npmjs.com/package/constructs-js)
+![locales](https://img.shields.io/badge/locales%20available-21-blue)
 
 ## Table of contents
 
@@ -187,7 +188,14 @@ export class AppComponent {
 - **fr** _(France)_
 - **ge** _(Georgia)_
 - **gr** _(Greece)_
+- **hr** _(Croatia)_
+- **id** _(Indonesia)_
+- **il** _(Israel)_
 - **ir** _(Iran)_
+- **it** _(Italia)_
+- **jp** _(Japan)_
+- **lv** _(Latvia)_
+- **pl** _(Poland)_
 
 ## Usage template
 

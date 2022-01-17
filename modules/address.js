@@ -12,7 +12,7 @@ module['exports'] = function(constructs){
     }
 
     self.getBuildingNumber  =   function(){
-        return constructs.loadRessource('address', 'building_numbers');
+        return constructs.loadRessource('address', 'building_numbers', {withZero: false});
     }
 
     self.getPostcode    =   function(){

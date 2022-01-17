@@ -21,7 +21,14 @@ function Constructs(locale){
         'fr':       require('./locales/fr'), // France
         'ge':       require('./locales/ge'), // Georgia
         'gr':       require('./locales/gr'), // Greece
+        'hr':       require('./locales/hr'), // Croatia
+        'id':       require('./locales/id'), // Indonesia
+        'il':       require('./locales/il'), // Israel
         'ir':       require('./locales/ir'), // Iran
+        'it':       require('./locales/it'), // Italia
+        'jp':       require('./locales/jp'), // Japan
+        'lv':       require('./locales/lv'), // Latvia
+        'pl':       require('./locales/pl'), // Poland
     };
 
     if(!self.loadedLocales[locale]){
