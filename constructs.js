@@ -65,6 +65,9 @@ function Constructs(locale){
     const phone             = require('./modules/phone');
     self.phone              = new phone(self);
 
+    const credit_card       = require('./modules/creditcard');
+    self.credit_card        = new credit_card(self);
+
     self.resultOutput   =   function(output){
         if(self.template.output.result === 'output') {
             if(self.template.output.type === 'json') {

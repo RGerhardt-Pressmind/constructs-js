@@ -43,6 +43,7 @@ var state             =   constructs.address.getState();
 var street            =   constructs.address.getStreet();
 var sur_name          =   constructs.name.getSurName();
 var title             =   constructs.name.getTitle();
+var credit_card       =   constructs.credit_card.getNumber();
     </code></pre>
 
     <p>
@@ -69,6 +70,7 @@ var title             =   constructs.name.getTitle();
         <strong>street</strong>: <span id="street"></span><br>
         <strong>sur_name</strong>: <span id="sur_name"></span><br>
         <strong>title</strong>: <span id="title"></span><br>
+        <strong>credit_card</strong>: <span id="credit_card"></span><br>
     </p>
 
     <script>
@@ -91,6 +93,7 @@ var title             =   constructs.name.getTitle();
         document.getElementById('state').innerText = constructs.address.getState();
         document.getElementById('street').innerText = constructs.address.getStreet();
         document.getElementById('title').innerText = constructs.name.getTitle();
+        document.getElementById('credit_card').innerText = constructs.credit_card.getNumber();
 
         document.getElementById('image').innerText = constructs.image.getAvatarImage();
         document.getElementById('image_img').src = document.getElementById('image').innerText;

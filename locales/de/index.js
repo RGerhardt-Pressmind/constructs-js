@@ -8,3 +8,4 @@ de.email            =   require('./email');
 de.company          =   require('./company');
 de.phone            =   require('./phone');
 de.loremIpsum       =   require('./loremIpsum');
+de.credit_card      =   require('./credit_card');
