@@ -35,7 +35,7 @@
     + [country](#country)
       - [getCountry](#getcountry)
       - [getDefaultCountry](#getdefaultcountry)
-    + [creditcard](#creditcard)
+    + [credit_card](#credit_card)
       - [getNumber](#getNumber)
       - [getMaestro](#getMaestro)
       - [getMastercard](#getMastercard)
@@ -87,12 +87,12 @@
     + [country](#country-1)
       - [[country:getCountry]](#countrygetcountry)
       - [[country:getDefaultCountry]](#countrygetdefaultcountry)
-    + [creditcard](#creditcard-1)
-      - [[creditcard:getNumber]](#creditcardgetnumber)
-      - [[creditcard:getMaestro]](#creditcardgetmaestro)
-      - [[creditcard:getMastercard]](#creditcardgetmastercard)
-      - [[creditcard:getAmex]](#creditcardgetamex)
-      - [[creditcard:getVisa]](#creditcardgetvisa)
+    + [credit_card](#credit_card-1)
+      - [[credit_card:getNumber]](#credit_cardgetnumber)
+      - [[credit_card:getMaestro]](#credit_cardgetmaestro)
+      - [[credit_card:getMastercard]](#credit_cardgetmastercard)
+      - [[credit_card:getAmex]](#credit_cardgetamex)
+      - [[credit_card:getVisa]](#credit_cardgetvisa)
     + [email](#email-1)
       - [[email:getEmail]](#emailgetemail)
       - [[email:getSuffix]](#emailgetsuffix)
@@ -451,12 +451,12 @@ let country_default = constructs.country.getDefaultCountry();
 Deutschland
 ```
 
-#### creditcard
+#### credit_card
 
 ##### getNumber
 Returns a randomly generated credit card number based on the locales.The provider can be controlled via the "types" parameter.
 ```javascript
-let creditcard = constructs.creditcard.getNumber({type: 'amex'});
+let credit_card = constructs.credit_card.getNumber({type: 'amex'});
 ```
 ```
 5561-9631-7062-589
@@ -465,7 +465,7 @@ let creditcard = constructs.creditcard.getNumber({type: 'amex'});
 ##### getMaestro
 Returns a randomly generated credit card number based on the locales.
 ```javascript
-let maestro = constructs.creditcard.getMaestro();
+let maestro = constructs.credit_card.getMaestro();
 ```
 ```
 5561-9631-7062-589
@@ -474,7 +474,7 @@ let maestro = constructs.creditcard.getMaestro();
 ##### getMastercard
 Returns a randomly generated credit card number based on the locales.
 ```javascript
-let mastercard = constructs.creditcard.getMastercard();
+let mastercard = constructs.credit_card.getMastercard();
 ```
 ```
 5561-9631-7062-589
@@ -483,7 +483,7 @@ let mastercard = constructs.creditcard.getMastercard();
 ##### getAmex
 Returns a randomly generated credit card number based on the locales.
 ```javascript
-let amex = constructs.creditcard.getAmex();
+let amex = constructs.credit_card.getAmex();
 ```
 ```
 5561-9631-7062-589
@@ -492,7 +492,7 @@ let amex = constructs.creditcard.getAmex();
 ##### getVisa
 Returns a randomly generated credit card number based on the locales.
 ```javascript
-let visa = constructs.creditcard.getVisa();
+let visa = constructs.credit_card.getVisa();
 ```
 ```
 5561-9631-7062-589
@@ -804,36 +804,36 @@ Returns the default country of the locale
 [country:getDefaultCountry]
 ```
 
-#### creditcard
+#### credit_card
 
-##### [creditcard:getNumber]
+##### [credit_card:getNumber]
 Returns a credit card number based on the locales
 ```
-[creditcard:getNumber(type = amex)]
+[credit_card:getNumber(type = amex)]
 ```
 
-##### [creditcard:getMaestro]
+##### [credit_card:getMaestro]
 Returns a credit card number based on the locales
 ```
-[creditcard:getMaestro]
+[credit_card:getMaestro]
 ```
 
-##### [creditcard:getMastercard]
+##### [credit_card:getMastercard]
 Returns a credit card number based on the locales
 ```
-[creditcard:getMastercard]
+[credit_card:getMastercard]
 ```
 
-##### [creditcard:getAmex]
+##### [credit_card:getAmex]
 Returns a credit card number based on the locales
 ```
-[creditcard:getAmex]
+[credit_card:getAmex]
 ```
 
-##### [creditcard:getVisa]
+##### [credit_card:getVisa]
 Returns a credit card number based on the locales
 ```
-[creditcard:getVisa]
+[credit_card:getVisa]
 ```
 
 
